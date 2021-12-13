@@ -1,6 +1,25 @@
 .center {
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.screen_title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 122px;
+    color: #D35749;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.menu_items {
+    width: 100%;
+    position: absolute;
+    top: calc(10% + 122px);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    border:1px solid #000;
 }
