@@ -15,11 +15,65 @@
     transform: translate(-50%, -50%);
 }
 
-.menu_items {
-    width: 100%;
+.centerLogo {
     position: absolute;
-    top: calc(10% + 122px);
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    border:1px solid #000;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.centerSquare {
+    width: 650px;
+    height: 700px;
+}
+
+.centerNFC {
+    position: absolute;
+    left: 30%;
+    top: 27%;
+    width: 250px;
+    height: 250px;
+}
+
+.scanText {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    font-size: 47px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+
+.instructionsText {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: 25px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.centerCancel {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    width: 300px;
+    color:gray;
+    transform: translate(-50%, -50%);
+}
+
+.cancelText {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    font-size: 35px;
+    color:white;
+    transform: translate(-50%, -50%);
 }
