@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root{
+    --white: #FFFFFF;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+}
+
+*::selection{
+    color:var(--white);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    background: #40586F;
+}
+
+
+.items .heading{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    font-size: 50px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: #D35749;
+}
+
+.items h2{
+    position: relative;
+    text-align: center;
+    color:var(--white);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight:600;
+    font-size: 22px;
+    bottom: 8.5rem;
+}
+
+.items .head-row1{
+    bottom: 80px;
+}
+
+.items .head-row2-col2{
+    bottom: 93px;
+}
+
+.items .head-row3-col1{
+    bottom: 90px;
+}
+.items .head-row3-col2{
+    bottom: 63px;
+}
+
+.items h3{
+    position: absolute;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.items .row1{
+    top: 100px;
+}
+
+.items .row2{
+    top: 110px;
+}
+
+.items .row3{
+    top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.items .box-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, auto));
+    grid-gap: 10%;
+    padding-right: 5rem;
+    padding-left: 5rem;
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    
+}
+
+.items .box-container .box{
+    position: relative;
+    height: 224.36px;
+    width: 185.87px;
+    top: 220px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.items .box-container .box img{
+    position: relative;
+    justify-self: center;
+    height:10rem;
+    top: 8%;
+    transform: translate(0, -100%);
+
+}
+
+.items .box-container .box .price{
+    position: relative;
+    top:19.5rem; left: 6rem;
+    color:var(--white);
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
