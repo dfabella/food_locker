@@ -53,6 +53,7 @@
     transform: translate(-50%, -50%);
 }
 
+/* tap and hold + locker unlocked screen classes */
 .container {
     position: absolute;
     left: 50%;
@@ -68,7 +69,7 @@
 .centerNFC {
     position: absolute;
     left: 30%;
-    top: 27%;
+    top: 26%;
     width: 250px;
     height: 250px;
 }
@@ -77,8 +78,10 @@
     position: absolute;
     top: 17%;
     left: 50%;
-    font-size: 47px;
-    font-weight: bold;
+    font-size: 39px;
+    font-weight: 600;
+    font-family: Montserrat;
+    text-align: center;
     transform: translate(-50%, -50%);
 }
 
@@ -87,6 +90,7 @@
     top: 70%;
     left: 50%;
     font-size: 25px;
+    font-family: Montserrat;
     text-align: center;
     transform: translate(-50%, -50%);
 }
@@ -105,6 +109,87 @@
     top: 85%;
     left: 50%;
     font-size: 35px;
+    font-family: Montserrat;
     color:white;
+    transform: translate(-50%, -50%);
+}
+
+.unlockText {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.centerLocker {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    width: 400px;
+    color:gray;
+    transform: translate(-50%, -50%);
+}
+
+/* enter pin screen classes*/
+.popupContainer {
+    position: absolute;
+    left: 50%;
+    top: 51%;
+    width: 100%;
+    height: 1500px;
+    transform: translate(-50%, -50%);
+}
+
+.centerInnerRectangle {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    width: 85%;
+    height: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.pinText {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    font-size: 49px;
+    font-weight: 600;
+    font-family: Montserrat;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.codeText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: Montserrat;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+/* customer leaving screen classes */
+.centerLock {
+    position: absolute;
+    left: 35%;
+    top: 28%;
+    width: 200px;
+    height: 200px;
+}
+
+.relockText {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    font-size: 30px;
+    font-family: Montserrat;
+    text-align: center;
     transform: translate(-50%, -50%);
 }
