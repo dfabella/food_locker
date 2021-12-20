@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Order Placement</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
+
+   </head>
+    <body style="background-color: #273F56;">
+
+        <div class="screenTitle">Cart</div>
+
+        <div class="cartPage">
+            <table>
+                <thead>
+                    <td>Item</td>
+                    <td>Name</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td>
+                        <img src="./assets/k-town-burger.png" alt="burger">
+                        </td>
+                        <td>K-Town Burger</td>
+                        <td>
+                            <button class="decrease-item">-</button>
+                            <span>1</span>
+                            <button class="increase-item">+</button>
+                        </td>
+                        <td>$11.50</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./assets/umami-classic-burger.png">
+                        </td>
+                        <td>Umami Classic Burger</td>
+                        <td>
+                            <button class="decrease-item">-</button>
+                            <span>1</span>
+                            <button class="increase-item">+</button>
+                        </td>
+                        <td>$9.50</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="toCheckout">
+            <button class="coBtnWrap">checkout<span id="price">*price*</span></button>
+        </div>
+    </body>
+</html>

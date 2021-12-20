@@ -1,3 +1,4 @@
+/* splash screen classes */
 .center {
     position: absolute;
     top: 50%;
@@ -5,15 +6,14 @@
     transform: translate(-50%, -50%);
 }
 
-.screenTitle {
+.centerLogo {
     position: absolute;
-    top: 15%;
     left: 50%;
-    font-size: 122px;
-    color: #D35749;
-    text-align: center;
+    top: 30%;
     transform: translate(-50%, -50%);
 }
+
+/* menu screen classes */
 
 .itemsContainer {
     position: absolute;
@@ -46,12 +46,105 @@
     transform: translate(-50%, -50%);
 }
 
-.centerLogo {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
+/* cart screen classes */
+
+cartToggle{
+    display: none;
 }
+
+/* main contents of cart */
+.screenTitle {
+    margin-top: 10%;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.cartPage{
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 80vw;
+    height: 120vw;
+
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+
+    font-family: Montserrat;
+}
+
+.cartPage table{
+    text-align: center;
+    padding: 20px 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cartPage tr{
+    border-bottom: 1px dotted #273F56;
+}
+
+.cartPage table thead td{
+    border: none;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.cartPage table tbody td{
+    font-size: 25px;
+    padding: 10px;
+}
+
+.cartPage table tbody td img{
+    width: 100px;
+    height: auto;
+}
+
+.cartPage table tbody button{
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: #273F5680;
+
+    font-size: 30px;
+    color: #151D25;
+
+    cursor: pointer;
+}
+
+.coBtnWrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+
+    background-color: #273F56;
+    border: 5px solid #D35749;
+    border-radius: 20px;
+
+    color: #D35749;
+    font-family: Montserrat;
+}
+
+.toCheckout button{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    bottom: 5%;
+
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#price{
+    font-weight: 600;
+}
+
+
 
 /* tap and hold + locker unlocked screen classes */
 .container {
