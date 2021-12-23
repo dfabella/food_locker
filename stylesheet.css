@@ -173,7 +173,7 @@ cartToggle{
     top: 12%;
     font-size: 40px;
     font-weight: 600;
-    text-align: center;    
+    text-align: center;
 }
 
 .bottomContainer {
@@ -263,6 +263,16 @@ cartToggle{
     left: 50%;
     top: 70%;
     transform: translate(-50%, -50%);
+    animation: float-in 0.4s ease-in-out forwards;
+}
+
+@keyframes float-in {
+  0% {
+    transform: translate(-50%, 90%);
+  }
+  100% {
+    transition: translate(-50%, -140%);
+  }
 }
 
 .centerSquare {
