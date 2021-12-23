@@ -56,8 +56,9 @@ cartToggle{
 .screenTitle {
     margin-top: 10%;
     font-family: Montserrat;
-    font-weight: 600;
-    font-size: 60px;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 49px;
     color: white;
     text-align: center;
 }
@@ -66,13 +67,14 @@ cartToggle{
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 80vw;
+    width: 90vw;
     height: 120vw;
 
-    background: rgba(255, 255, 255, 0.5);
+    background: #FFFFFFB3;
     border-radius: 20px;
 
     font-family: Montserrat;
+    color: black;
 }
 
 .cartPage table{
@@ -89,11 +91,13 @@ cartToggle{
 .cartPage table thead td{
     border: none;
     padding: 20px;
-    font-size: 30px;
+    font-size: 36px;
+    color: #273F56;
 }
 
 .cartPage table tbody td{
-    font-size: 25px;
+    font-size: 38px;
+    font-weight: 600;
     padding: 10px;
 }
 
@@ -122,11 +126,11 @@ cartToggle{
     justify-content: space-between;
     padding: 20px 25px;
 
-    background-color: #273F56;
+    background-color: #40586F;
     border: 5px solid #D35749;
     border-radius: 20px;
 
-    color: #D35749;
+    color: white;
     font-family: Montserrat;
 }
 
@@ -136,7 +140,7 @@ cartToggle{
     left: 10%;
     bottom: 5%;
 
-    font-size: 30px;
+    font-size: 50px;
     text-transform: uppercase;
 }
 
