@@ -18,14 +18,14 @@
     color:var(--white);
 }
 
-html{
+.menu_page{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
 
-body{
+.menu_page_body{
     background: #40586F;
 }
 
