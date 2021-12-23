@@ -20,48 +20,54 @@
     <h1 class="heading"> Menu </h1>
 
     <div class="box-container">
-
-        <div class="box">
+        
+        <button class="box" id="myBtn1">
             <span class="price">$11.50</span>
             <img src="assets/k-town-burger.png" alt="">
             <h2 class="head-row1">K-Town Burger</h2>
             <h3 class="row1">4oz smash patty, gochujang marinated pork belly, korean slaw, pickles, classic sauce</h3>
-        </div>
+                    
+        </button> 
+           
 
-        <div class="box">
+        <button class="box" id="myBtn2">
             <span class="price">$9.50</span>
             <img src="assets/umami-classic-burger.png" alt="">
             <h2 class="head-row1">Umami Classic Burger</h2>
             <h3 class="row1">4oz smash patty, classic sauce, lettuce, pickles, tomato, caramelized onions, american cheese</h3>
-        </div>
+        </button>    
 
-        <div class="box">
+
+        <button class="box" id="myBtn3">
             <span class="price">$9.50</span>
             <img src="assets/umami-patty-melt.png" alt="">
             <h2 class="head-row2-col1">Umami Patty Melt</h2>
-            <h3 class="row2">4oz smash patty, caramelized onions, provolone, american cheese, classic sauce</h3>
-        </div>
+            <h3 class="row2-col1">4oz smash patty, caramelized onions, provolone, american cheese, classic sauce</h3>
+        </button>
+    
 
-        <div class="box">
+        <button class="box" id="myBtn4">
             <span class="price">$8.50</span>
             <img src="assets/sams-crsip-chicken.png" alt="">
             <h2 class="head-row2-col2">Sam's Crispy Chicken Sandwich</h2>
-            <h3 class="row2">Hand breaded chicken strips between a brioche bun with pickles, umami slaw, classic sauce</h3>
-        </div>
-    
-        <div class="box">
+            <h3 class="row2-col2">Hand breaded chicken strips between a brioche bun with pickles, umami slaw, classic sauce</h3>
+        </button>
+        
+
+        <button class="box" id="myBtn5">
             <span class="price">$11.50</span>
             <img src="assets/texas-bbq-bacon.png" alt="">
             <h2 class="head-row3-col1">Texas BBQ Bacon Burger</h2>
-            <h3 class="row3">4oz smash patty, bacon wrapped onion ring, classic sauce, romaine, tomato, pickle, american cheese, BBQ sauce</h3>
-        </div>
-    
-        <div class="box">
+            <h3 class="row3-col1">4oz smash patty, bacon wrapped onion ring, classic sauce, romaine, tomato, pickle, american cheese, BBQ sauce</h3>
+        </button>
+        
+
+        <button class="box" id="myBtn6">
             <span class="price">$10.50</span>
             <img src="assets/truffle-burger.png" alt="">
             <h2 class="head-row3-col2">Truffle Burger</h2>
-            <h3 class="row3">4oz smash patty, truffle aioli, truffle fondue, truffle glaze</h3>
-        </div>
+            <h3 class="row3-col2">4oz smash patty, truffle aioli, truffle fondue, truffle glaze</h3>
+        </button>    
         
 
     </div>
@@ -71,7 +77,183 @@
 
 <!-- items section ends -->
 
-<script src="js/script.js"></script>
+<section class="popUpSection" id="popUpSection">
+
+    
+
+    <div id="popups1" class="overlay">
+
+        
+        <div id="item1" class="overlay-content">
+            <span class="close">&times;</span>
+            <span class="price">$11.50</span>
+            <img src="assets/k-town-burger.png" alt="">
+            <h2 class="overlayName">K-Town Burger</h2>
+
+            <div class="minus_outline">
+                <h1>-</h1>
+            </div>
+
+            <div class="count_outline">
+
+            </div>
+
+            <div class="plus_outline">
+                <h1>+</h1>
+            </div>
+
+
+            <h3 class="addToCart" href="cart.html">ADD TO CART</h3>
+
+        </div>
+
+    </div>
+
+    <div id="popups2" class="overlay">
+
+        
+        <div id="item1" class="overlay-content">
+            <span class="close">&times;</span>
+            <span class="price">$9.50</span>
+            <img src="assets/umami-classic-burger.png" alt="">
+            <h2 class="overlayName">Umami Classic Burger</h2>
+
+            <div class="minus_outline">
+                <h1>-</h1>
+            </div>
+
+            <div class="count_outline">
+
+            </div>
+
+            <div class="plus_outline">
+                <h1>+</h1>
+            </div>
+
+
+            <h3 class="addToCart" href="cart.html">ADD TO CART</h3>
+
+        </div>
+
+    </div>
+
+    <div id="popups3" class="overlay">
+
+        
+        <div id="item1" class="overlay-content">
+            <span class="close">&times;</span>
+            <span class="price">$9.50</span>
+            <img src="assets/umami-patty-melt.png" alt="">
+            <h2 class="overlayName">Umami Patty Melt</h2>
+
+            <div class="minus_outline">
+                <h1>-</h1>
+            </div>
+
+            <div class="count_outline">
+
+            </div>
+
+            <div class="plus_outline">
+                <h1>+</h1>
+            </div>
+
+
+            <h3 class="addToCart" href="cart.html">ADD TO CART</h3>
+
+        </div>
+
+    </div>
+
+    <div id="popups4" class="overlay">
+
+        
+        <div id="item1" class="overlay-content">
+            <span class="close">&times;</span>
+            <span class="price">$8.50</span>
+            <img src="assets/sams-crsip-chicken.png" alt="">
+            <h2 class="overlayName">Sam's Crispy Chicken Sandwich</h2>
+
+            <div class="minus_outline">
+                <h1>-</h1>
+            </div>
+
+            <div class="count_outline">
+
+            </div>
+
+            <div class="plus_outline">
+                <h1>+</h1>
+            </div>
+
+
+            <h3 class="addToCart" href="cart.html">ADD TO CART</h3>
+
+        </div>
+
+    </div>
+
+    <div id="popups5" class="overlay">
+
+        
+        <div id="item1" class="overlay-content">
+            <span class="close">&times;</span>
+            <span class="price">$11.50</span>
+            <img src="assets/texas-bbq-bacon.png" alt="">
+            <h2 class="overlayName">Texas BBQ Bacon Burger</h2>
+
+            <div class="minus_outline">
+                <h1>-</h1>
+            </div>
+
+            <div class="count_outline">
+
+            </div>
+
+            <div class="plus_outline">
+                <h1>+</h1>
+            </div>
+
+
+            <h3 class="addToCart" href="cart.html">ADD TO CART</h3>
+
+        </div>
+
+    </div>
+
+    <div id="popups6" class="overlay">
+
+        
+        <div id="item1" class="overlay-content">
+            <span class="close">&times;</span>
+            <span class="price">$10.50</span>
+            <img src="assets/truffle-burger.png" alt="">
+            <h2 class="overlayName">Truffle Burger</h2>
+
+            <div class="minus_outline">
+                <h1>-</h1>
+            </div>
+
+            <div class="count_outline">
+
+            </div>
+
+            <div class="plus_outline">
+                <h1>+</h1>
+            </div>
+
+
+            <h3 class="addToCart" href="cart.html">ADD TO CART</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="menu_script.js">
+    
+</script>
 
 </body>
 
