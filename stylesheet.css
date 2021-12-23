@@ -1,3 +1,35 @@
+:root{
+    --white: #FFFFFF;
+    --FLred: #D35749;
+    --FLblue: #40586F;
+}
+
+
+html, body {
+    min-height: 100%;
+}
+
+.topRightLogo {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    width: 200px;
+    height: auto;
+    padding: 50px;
+}
+
+.toMenu {
+    position: absolute;
+    top: 0px;
+    padding: 30px;
+
+    width: 80px;
+    height: auto;
+    background: none;
+    border: none;
+}
+
 /* splash screen classes */
 .center {
     position: absolute;
@@ -12,9 +44,10 @@
     top: 30%;
     transform: translate(-50%, -50%);
 }
+/* end of splash screen classes */
+
 
 /* menu screen classes */
-
 .itemsContainer {
     position: absolute;
     top: calc(10% + 122px + 10%);
@@ -45,9 +78,10 @@
     width: 100%;
     transform: translate(-50%, -50%);
 }
+/* end of menu screen classes */
+
 
 /* cart screen classes */
-
 cartToggle{
     display: none;
 }
@@ -63,6 +97,7 @@ cartToggle{
     text-align: center;
 }
 
+/* cart contents */
 .cartPage{
     margin: auto;
     margin-top: 5%;
@@ -106,6 +141,7 @@ cartToggle{
     height: auto;
 }
 
+/* adjust quantity */
 .cartPage table tbody button{
     margin: 0 5px;
     width: 30px;
@@ -121,6 +157,7 @@ cartToggle{
     cursor: pointer;
 }
 
+/* checkout button */
 .coBtnWrap{
     display: flex;
     justify-content: space-between;
@@ -147,115 +184,150 @@ cartToggle{
 #price{
     font-weight: 600;
 }
+/* end of cart screen classes */
 
-/* order processing screen classes */
 
+/* order progress screen classes */
 .detailsTitle {
-    margin-top: 30%;
+    margin-top: 33%;
     font-family: Montserrat;
-    font-weight: 600;
-    font-size: 60px;
+    font-weight: bold;
+    font-size: 72px;
     color: white;
     text-align: center;
 }
 
 .confirmedText {
     position: relative;
-    top: 8%;
-    margin-left: 10%;
-    font-size: 43px;
+    top: 70px;
+    margin-left: 12.5%;
+    margin-bottom: 15%;
+    font-size: 38px;
     font-weight: 600;
     font-family: Montserrat;
 }
 
-.progressBar1 {
+.progressBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 150px;
+
     position: relative;
-    top: 12%;
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;    
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 18px;
+
+    background-color: white;
+    border-radius: 20px;
 }
+
+.progressFill {
+    position: absolute;
+    width: 10%;
+    height: 18px;
+    background-color: #D35749;
+    border-radius: 30px;
+}
+
+.progressBar img {
+    position: relative;
+    width: 60px;
+    height: auto;
+}
+
 
 .bottomContainer {
     margin-top: 10%;
-    height: 100vw;
+    height: 200vw;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
 }
 
-.orderContainer {
+/* order contents */
+.orderContainer{
+    position: relative;
+
     margin: auto;
-    margin-top: 20%;
-    align-items: center;
-    width: 90%;
-    height: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 90vw;
+    height: 70vw;
+
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
+
+    font-family: Montserrat;
+    color: black;
 }
 
-.itemDetailText {
-    position: absolute;
-    top: 65%;
-    left: 45%;
-    font-size: 35px;
-    font-family: Montserrat;
+.orderContainer table{
     text-align: center;
-    transform: translate(-50%, -50%);
+    padding: 20px 20px;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.horizontalLine {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    font-size: 35px;
-    font-family: Montserrat;
-    text-align: center;
-    font-weight: 600;
-    transform: translate(-50%, -50%);
+.orderContainer table thead td{
+    border: none;
+    padding: 25px;
+    font-size: 30px;
+    color: #273F56;
+}
+
+.orderContainer table tbody td{
+    font-size: 32px;
+    padding: 20px;
+}
+
+.orderContainer hr {
+    margin: 40px;
 }
 
 .totalText {
-    position: absolute;
-    top: 78%;
-    right: 15%;
+    padding: 5px 30px;
     font-size: 35px;
     font-family: Montserrat;
-    text-align: center;
-    transform: translate(-50%, -50%);
+    float: right;
 }
 
-.lockerPinContainer {
-    position: relative;
-    align-items: center;
-    margin-top: -20%;
-    margin-left: 20%;
-    width: 60%;
-    height: 13%;
+.pickupInfoContainer {
+    position: absolute;
+    bottom: 40px;
+    margin: auto;
+
+    width: 100%;
+    height: auto;
+}
+
+.lockerNumContainer {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 200px;
+
     background: #40586F;
-    border-radius: 20px;
+    border-radius: 40px;
+
+    text-align: center;
+    font-size: 38px;
+    font-family: Montserrat;
+    color: white;
+    font-weight: 600;
 }
 
-.lockerNumText {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    font-size: 35px;
-    font-family: Montserrat;
-    color:white;
-    font-weight: 600;
-    transform: translate(-50%, -50%);
+
+#lockerPinText {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
 }
 
-.orderPinText {
-    position: absolute;
-    top: 89%;
-    left: 50%;
-    font-size: 35px;
-    font-family: Montserrat;
-    color:white;
-    font-weight: 600;
-    transform: translate(-50%, -50%);
-}
+/* end of order progress screen classes */
+
 
 /* tap and hold + locker unlocked screen classes */
 .container {
@@ -314,7 +386,7 @@ cartToggle{
     left: 50%;
     font-size: 35px;
     font-family: Montserrat;
-    color:white;
+    color: white;
     transform: translate(-50%, -50%);
 }
 
