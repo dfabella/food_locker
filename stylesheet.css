@@ -148,7 +148,114 @@ cartToggle{
     font-weight: 600;
 }
 
+/* order processing screen classes */
 
+.detailsTitle {
+    margin-top: 30%;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.confirmedText {
+    position: relative;
+    top: 8%;
+    margin-left: 10%;
+    font-size: 43px;
+    font-weight: 600;
+    font-family: Montserrat;
+}
+
+.progressBar1 {
+    position: relative;
+    top: 12%;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;    
+}
+
+.bottomContainer {
+    margin-top: 10%;
+    height: 100vw;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+.orderContainer {
+    margin: auto;
+    margin-top: 20%;
+    align-items: center;
+    width: 90%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+.itemDetailText {
+    position: absolute;
+    top: 65%;
+    left: 45%;
+    font-size: 35px;
+    font-family: Montserrat;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.horizontalLine {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: 35px;
+    font-family: Montserrat;
+    text-align: center;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+}
+
+.totalText {
+    position: absolute;
+    top: 78%;
+    right: 15%;
+    font-size: 35px;
+    font-family: Montserrat;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.lockerPinContainer {
+    position: relative;
+    align-items: center;
+    margin-top: -20%;
+    margin-left: 20%;
+    width: 60%;
+    height: 13%;
+    background: #40586F;
+    border-radius: 20px;
+}
+
+.lockerNumText {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    font-size: 35px;
+    font-family: Montserrat;
+    color:white;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+}
+
+.orderPinText {
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    font-size: 35px;
+    font-family: Montserrat;
+    color:white;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+}
 
 /* tap and hold + locker unlocked screen classes */
 .container {
@@ -288,5 +395,18 @@ cartToggle{
     font-size: 30px;
     font-family: Montserrat;
     text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+/* farewell screen class */
+.centerFarewell {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    text-align: center;
+    font-size: 39px;
+    font-weight: 600;
+    font-family: Montserrat;
+    color: white;
     transform: translate(-50%, -50%);
 }
