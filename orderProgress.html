@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
    </head>
 
-    <body style="background-color: #40586F;">
+    <body onload="completeOrder()">
         <button class="toMenu">
         <img src="./assets/to-menu.png" alt="">
         </button>
@@ -20,10 +20,10 @@
             <div class="confirmedText">Order Confirming</div>
 
             <div class="progressBar">
-                <div class="progressFill"></div>
-                <img src="./assets/order-processing.png" alt="">
-                <img src="./assets/order-preparing.png" alt="">
-                <img src="./assets/order-ready.png" alt="">
+                <div id="progressFill"></div>
+                <img id="processing" src="./assets/order-processing.png" alt="">
+                <img id="prepearing" src="./assets/order-preparing.png" alt="">
+                <img id="ready" src="./assets/order-ready.png" alt="">
                 </div>
 
             <div class="orderContainer">
@@ -52,5 +52,31 @@
 
             </div>
         </div>
+        <script>
+        let timeout;
+        var i = 0;
+
+        function completeOrder() {
+            timeout = setTimeout(load, 1000);
+        }
+
+        function load() {
+            if (i === 0) {
+                i = 1;
+                var elem = document.getElementByID('progressFill');
+                var width = 1;
+                var id = setInterval(frame, 10);
+            }
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        i = 0;
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
+                }
+        }
+        </script>
     </body>
 </html>
