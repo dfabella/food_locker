@@ -17,13 +17,13 @@
 
         <div class="bottomContainer">
 
-            <div class="confirmedText">Order Confirming</div>
+            <div id="confirmedText">Order Confirming...</div>
 
             <div class="progressBar">
                 <div id="progressFill"></div>
-                <img id="processing" src="./assets/order-processing.png" alt="">
-                <img id="prepearing" src="./assets/order-preparing.png" alt="">
-                <img id="ready" src="./assets/order-ready.png" alt="">
+                <img src="./assets/order-processing.png" id="processing" alt="">
+                <img src="./assets/order-preparing.png" id="preparing" alt="">
+                <img src="./assets/order-ready.png" id="ready" alt="">
                 </div>
 
             <div class="orderContainer">
@@ -57,23 +57,33 @@
         var i = 0;
 
         function completeOrder() {
-            timeout = setTimeout(load, 1000);
+            timeout = setTimeout(load, 1500);
         }
 
         function load() {
             if (i === 0) {
                 i = 1;
-                var elem = document.getElementByID('progressFill');
+                var elem = document.getElementById('progressFill');
+                var progressText = document.getElementById('confirmedText');
                 var width = 1;
                 var id = setInterval(frame, 10);
             }
                 function frame() {
-                    if (width >= 100) {
+                    if (width >= 93) {
+                        document.getElementById('ready').src="./assets/order-ready1.png";
+                        progressText.textContent = "Order Ready For Pick-Up!";
                         clearInterval(id);
-                        i = 0;
+                        i = 1;
                     } else {
-                        width++;
+                        if (elem.style.width == "46%") {
+                            document.getElementById('preparing').src="./assets/order-preparing1.png";
+                            progressText.textContent = "Order Preparing...";
+                            width++;
+                            elem.style.width = width + "%";
+                        } else {
+                        width += 0.2;
                         elem.style.width = width + "%";
+                        }
                     }
                 }
         }

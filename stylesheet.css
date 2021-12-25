@@ -198,7 +198,7 @@ cartToggle{
     text-align: center;
 }
 
-.confirmedText {
+#confirmedText {
     position: relative;
     top: 70px;
     margin-left: 12.5%;
@@ -227,7 +227,7 @@ cartToggle{
 
 #progressFill {
     position: absolute;
-    width: 10%;
+    width: 1%;
     height: 18px;
     background-color: #D35749;
     border-radius: 30px;

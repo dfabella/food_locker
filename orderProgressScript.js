@@ -14,11 +14,16 @@ function load() {
     }
         function frame() {
             if (width >= 100) {
+                document.getElementById('ready').src="./assets/order-ready1.png"// change end icon to icon1
                 clearInterval(id);
                 i = 0;
             } else {
+                if (elem.style.width == "50%") {
+                    document.getElementById('preparing').src="./assets/order-preparing1.png"// change end icon to icon1
+                } else {
                 width++;
                 elem.style.width = width + "%";
+                }
             }
         }
 }
