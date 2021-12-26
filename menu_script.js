@@ -43,10 +43,15 @@ btn6.onclick = function() {
   modal6.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+var buttonTarget = document.getElementsByClassName("plus_outline")[0];
+var counter = 1;
+
+function addBtn(){
+    buttonTarget.innerHTML = counter.toString();
+    counter++;
+    return counter;
 }
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {

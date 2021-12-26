@@ -28,6 +28,9 @@
     background: #40586F;
 }
 
+/*------------------------*/
+/*----Item Adjustments----*/
+/*------------------------*/
 
 .items .heading{
     position: absolute;
@@ -79,7 +82,6 @@
     font-size: 13px;
     padding-left: 20px;
     padding-right: 20px;
-
 }
 
 .items .row1{
@@ -102,7 +104,6 @@
     top: -80px;
 }
 
-
 .items .box-container{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, auto));
@@ -114,7 +115,6 @@
     justify-items: center;
     align-content: space-evenly;
     align-items: center;
-    
 }
 
 .items .box-container .box {
@@ -127,13 +127,11 @@
     border-radius: 10px;
 }
 
-
 .items .box-container .box img{
     position:relative;
     justify-self: center;
     top: 14%;
     transform: translate(0, -100%);
-
 }
 
 .items .box-container .box .price{
@@ -144,6 +142,10 @@
     padding: .5rem 1rem; 
     border-radius: .5rem;
 }
+
+/*-------------------------*/
+/*---overlay adjustments---*/
+/*-------------------------*/
 
 .overlay {
     display: none; /* Hidden by default */
@@ -156,8 +158,6 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    
-    
 }
 
 .overlay .overlay-content {
@@ -170,8 +170,6 @@
     background: var(--white);
     text-align: center;
     border-radius: 10px;
-
-
 }
 
 .overlay .overlay-content img{
@@ -189,7 +187,7 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight:600;
-    font-size: 24px;
+    font-size: 23px;
     top: -50%;
 }
 
@@ -210,7 +208,6 @@
     color:#000;
     position: relative;
     text-align: center;
-    top: 6px;
 }
 
 .overlay .overlay-content .plus_outline{
@@ -230,7 +227,6 @@
     color:#000;
     position: relative;
     text-align: center;
-    top: 6px;
 }
 
 .overlay .overlay-content .count_outline{
@@ -239,12 +235,21 @@
     right: 35%;
     top: 40%;
     bottom: 45%;
+    font-size: 15px;
+    color: var(--darkblue);
     
     border: 2px solid #151D25;
     border-radius: 49.4975px;
 }
 
-.overlay .overlay-content h3{
+.overlay .overlay-content .count_outline h1{
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    top: 12%;
+}
+
+.overlay .overlay-content a{
     position: relative;
     text-align: center;
     color:var(--red);
@@ -255,21 +260,111 @@
     top: -20%;
 }
 
+.overlay .overlay-content .price{
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--darkblue);
+    top: 87%;
+    left: 37%;
+}
 
+
+/*--------------------------*/
+/*-------popup buttons------*/
+/*--------------------------*/
+
+#popups1 .count_outline{
+    top: 35%;
+    bottom: 50%;
+}
+
+#popups1 .plus_outline{
+    top: 35%;
+}
+
+#popups1 .minus_outline{
+    top: 35%;
+}
+
+#popups2 .count_outline{
+    top: 43%;
+    bottom: 42%;
+}
+
+#popups2 .plus_outline{
+    top: 43%;
+}
+
+#popups2 .minus_outline{
+    top: 43%;
+}
+
+#popups3 .count_outline{
+    top: 45%;
+    bottom: 40%;
+}
+
+#popups3 .plus_outline{
+    top: 45%;
+}
+
+#popups3 .minus_outline{
+    top: 45%;
+}
+
+#popups4 .count_outline{
+    top: 54%;
+    bottom: 31%;
+}
+
+#popups4 .plus_outline{
+    top: 54%;
+}
+
+#popups4 .minus_outline{
+    top: 54%;
+}
+
+#popups5 .count_outline{
+    top: 45%;
+    bottom: 40%;
+}
+
+#popups5 .plus_outline{
+    top: 45%;
+}
+
+#popups5 .minus_outline{
+    top: 45%;
+}
+
+#popups6 .count_outline{
+    top: 35%;
+    bottom: 50%;
+}
+
+#popups6 .plus_outline{
+    top: 35%;
+}
+
+#popups6 .minus_outline{
+    top: 35%;
+}
+
+#popups4 a{
+    position: relative;
+    text-align: center;
+    top: -27%;
+}
 
 .close {
-    color: #aaaaaa;
+    color: var(--white);
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 /*
 @media screen and (max-height: 450px) {
