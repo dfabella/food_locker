@@ -247,219 +247,6 @@
     /* top: 12%; */
 }
 
-/* SECOND ITEM */
-
-.overlay .overlay-content .minus2{
-    position: absolute;
-    left: 12%;
-    top: 40%;
-    
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .plus2{
-    position: absolute;
-    right: 12%;
-    top: 40%;
-
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .count2{
-    position: absolute;
-    left: 35%;
-    right: 35%;
-    top: 40%;
-    bottom: 45%;
-    font-size: 20px;
-    color: var(--darkblue);
-    font-weight: 600;
-    border: 2px solid #151D25;
-    border-radius: 49.4975px;
-    pointer-events: none;
-}
-
-/* THIRD ITEM */
-
-.overlay .overlay-content .minus3{
-    position: absolute;
-    left: 12%;
-    top: 40%;
-    
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .plus3{
-    position: absolute;
-    right: 12%;
-    top: 40%;
-
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .count3{
-    position: absolute;
-    left: 35%;
-    right: 35%;
-    top: 40%;
-    bottom: 45%;
-    font-size: 20px;
-    color: var(--darkblue);
-    font-weight: 600;
-    border: 2px solid #151D25;
-    border-radius: 49.4975px;
-    pointer-events: none;
-}
-
-/* FOURTH ITEM */
-
-.overlay .overlay-content .minus4{
-    position: absolute;
-    left: 12%;
-    top: 40%;
-    
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .plus4{
-    position: absolute;
-    right: 12%;
-    top: 40%;
-
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .count4{
-    position: absolute;
-    left: 35%;
-    right: 35%;
-    top: 40%;
-    bottom: 45%;
-    font-size: 20px;
-    color: var(--darkblue);
-    font-weight: 600;
-    border: 2px solid #151D25;
-    border-radius: 49.4975px;
-    pointer-events: none;
-}
-
-/* FIFTH ITEM */
-
-.overlay .overlay-content .minus5{
-    position: absolute;
-    left: 12%;
-    top: 40%;
-    
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .plus5{
-    position: absolute;
-    right: 12%;
-    top: 40%;
-
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .count5{
-    position: absolute;
-    left: 35%;
-    right: 35%;
-    top: 40%;
-    bottom: 45%;
-    font-size: 20px;
-    color: var(--darkblue);
-    font-weight: 600;
-    border: 2px solid #151D25;
-    border-radius: 49.4975px;
-    pointer-events: none;
-}
-
-/* SIXTH ITEM */
-
-.overlay .overlay-content .minus6{
-    position: absolute;
-    left: 12%;
-    top: 40%;
-    
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .plus6{
-    position: absolute;
-    right: 12%;
-    top: 40%;
-
-    width: 37px;
-    height: 37px;
-    background: rgba(64, 88, 111, 0.5);
-    /* color: rgba(0,0,0,0.2); */
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.overlay .overlay-content .count6{
-    position: absolute;
-    left: 35%;
-    right: 35%;
-    top: 40%;
-    bottom: 45%;
-    font-size: 20px;
-    color: var(--darkblue);
-    font-weight: 600;
-    border: 2px solid #151D25;
-    border-radius: 49.4975px;
-    pointer-events: none;
-}
-
-
-
-
 .overlay .overlay-content a{
     position: relative;
     text-align: center;
@@ -488,95 +275,86 @@
     top: 87%;
     left: 37%;
 }
-/* 
-.overlay .overlay-content .priceVal2{
-    position: relative;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--darkblue);
-    top: 87%;
-    left: 37%;
-} */
 
 /*--------------------------*/
 /*-------popup buttons------*/
 /*--------------------------*/
 
-#popups1 .count{
+#popups1 #count1{
     top: 35%;
     bottom: 50%;
 }
 
-#popups1 .plus{
+#popups1 #plus1{
     top: 35%;
 }
 
-#popups1 .minus{
+#popups1 #minus1{
     top: 35%;
 }
 
-#popups2 .count2{
+#popups2 #count2{
     top: 43%;
     bottom: 42%;
 }
 
-#popups2 .plus2{
+#popups2 #plus2{
     top: 43%;
 }
 
-#popups2 .minus2{
+#popups2 #minus2{
     top: 43%;
 }
 
-#popups3 .count3{
+#popups3 #count3{
     top: 45%;
     bottom: 40%;
 }
 
-#popups3 .plus3{
+#popups3 #plus3{
     top: 45%;
 }
 
-#popups3 .minus3{
+#popups3 #minus3{
     top: 45%;
 }
 
-#popups4 .count4{
+#popups4 #count4{
     top: 54%;
     bottom: 31%;
 }
 
-#popups4 .plus4{
+#popups4 #plus4{
     top: 54%;
 }
 
-#popups4 .minus4{
+#popups4 #minus4{
     top: 54%;
 }
 
-#popups5 .count5{
+#popups5 #count5{
     top: 45%;
     bottom: 40%;
 }
 
-#popups5 .plus5{
+#popups5 #plus5{
     top: 45%;
 }
 
-#popups5 .minus5{
+#popups5 #minus5{
     top: 45%;
 }
 
-#popups6 .count6{
+#popups6 #count6{
     top: 35%;
     bottom: 50%;
 }
 
-#popups6 .plus6{
+#popups6 #plus6{
     top: 35%;
 }
 
-#popups6 .minus6{
+#popups6 #minus6{
     top: 35%;
 }
 
