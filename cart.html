@@ -7,9 +7,11 @@
    <head>
        <title>Order Placement</title>
         <link rel="stylesheet" href="stylesheet.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
    </head>
+
     <body style="background-color: #40586F;">
+        <input type="image" src="./assets/to-menu.png" class="toMenu" onclick="location.href='menu.html'">
+        <img class="topRightLogo" src="./assets/logo.png" alt="food locker logo">
 
         <div class="screenTitle" id="cartTitle">Cart</div>
 
@@ -123,7 +125,7 @@
                 </tbody>
             </table>
             <div class="toCheckout">
-                <button class="coBtnWrap">Place order<span id="price">10.50</span></button>
+                <button class="coBtnWrap" onclick="toOrderProg()">Place order<span id="price">10.50</span></button>
             </div>
         </div>
 

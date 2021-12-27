@@ -174,6 +174,14 @@ function deleteItem(r) {
     location.reload();
 }
 
+//PlACE ORDER
+function toOrderProg() {
+    if (totalPrice.innerText != "0.00") {
+        window.location.href = 'orderProgress.html';
+    }
+
+}
+
 const clearButton = document.getElementById('cartTitle');
 clearButton.addEventListener("click", ()=>{
     localStorage.clear();
