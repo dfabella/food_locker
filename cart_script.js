@@ -172,7 +172,9 @@ function deleteItem(r) {
     }
 
     location.reload();
+}
 
 const clearButton = document.getElementById('cartTitle');
 clearButton.addEventListener("click", ()=>{
     localStorage.clear();
+});
