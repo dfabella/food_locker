@@ -61,8 +61,8 @@ let amount1 = Number(localStorage.getItem("a"));
             prices[i].innerText = price1.toFixed(2);
             amounts[i].innerText = amount1;
             break;
-        } 
-    } 
+        }
+    }
 
 //SECOND CART ITEM
 let name2 = localStorage.getItem('name2');
@@ -77,7 +77,7 @@ let amount2 = Number(localStorage.getItem("b"));
             prices[i].innerText = price2.toFixed(2);
             amounts[i].innerText = amount2;
             break;
-        } 
+        }
     }
 
 //THIRD CART ITEM
@@ -93,7 +93,7 @@ let amount3 = Number(localStorage.getItem("c"));
             prices[i].innerText = price3.toFixed(2);
             amounts[i].innerText = amount3;
             break;
-        } 
+        }
     }
 
 //FOURTH CART ITEM
@@ -109,7 +109,7 @@ let amount4 = Number(localStorage.getItem("d"));
             prices[i].innerText = price4.toFixed(2);
             amounts[i].innerText = amount4;
             break;
-        } 
+        }
     }
 
 //FIFTH CART ITEM
@@ -125,7 +125,7 @@ let amount5 = Number(localStorage.getItem("e"));
             prices[i].innerText = price5.toFixed(2);
             amounts[i].innerText = amount5;
             break;
-        } 
+        }
     }
 
 //SIXTH CART ITEM
@@ -141,13 +141,39 @@ let amount6 = Number(localStorage.getItem("f"));
             prices[i].innerText = price6.toFixed(2);
             amounts[i].innerText = amount6;
             break;
-        } 
+        }
     }
 
 const totalPrice = document.getElementById('price');
 let sum = price1 + price2 + price3 + price4 + price5 + price6;
 
 totalPrice.innerText = sum.toFixed(2);
+
+//DELETE ITEM
+function deleteItem(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    var name = document.getElementById("cartItem" + i).innerText; //get item's name
+
+    // retrieve key names to delete based on item's name
+    let toDeleteID = "";
+    for(let i = 1; i <= spaces.length; i++) {
+        let keyVal = localStorage.getItem("name" + i);
+        if (keyVal === name) {
+            toDeleteID = i.toString();
+        }
+    }
+
+    alert(toDeleteID);
+
+    // delete those key names from localStorage
+    const itemDetails = ["name", "newPrice"];
+    const amounts = ["","a", "b", "c", "d", "e", "f"]
+    for(const itemDetail of itemDetails) {
+        localStorage.removeItem(itemDetail + toDeleteID);
+        localStorage.removeItem(amounts[toDeleteID]);
+    }
+
+    location.reload();
 
 const clearButton = document.getElementById('cartTitle');
 clearButton.addEventListener("click", ()=>{
@@ -156,7 +182,6 @@ clearButton.addEventListener("click", ()=>{
     // for(let i = 0; i < prices.length; i++){
     //     prices[i].innerText = zeroPrice.toFixed(2);
     // }
-    
+
 
 });
-
