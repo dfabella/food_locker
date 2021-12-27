@@ -163,8 +163,6 @@ function deleteItem(r) {
         }
     }
 
-    alert(toDeleteID);
-
     // delete those key names from localStorage
     const itemDetails = ["name", "newPrice"];
     const amounts = ["","a", "b", "c", "d", "e", "f"]
@@ -178,10 +176,3 @@ function deleteItem(r) {
 const clearButton = document.getElementById('cartTitle');
 clearButton.addEventListener("click", ()=>{
     localStorage.clear();
-
-    // for(let i = 0; i < prices.length; i++){
-    //     prices[i].innerText = zeroPrice.toFixed(2);
-    // }
-
-
-});
