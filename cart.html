@@ -1,5 +1,5 @@
 <!-- Yo ok so when you click "CART" at the top
-    it resets all the values including in the backend, 
+    it resets all the values including in the backend,
     i made it like that for testing purposes -->
 
 <!DOCTYPE html>
@@ -8,7 +8,6 @@
        <title>Order Placement</title>
         <link rel="stylesheet" href="stylesheet.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
-        <script src="./js/orderProgressScript.js"></script>
    </head>
     <body style="background-color: #40586F;">
 
@@ -18,27 +17,15 @@
             <table id="cartItems">
                 <thead>
                     <td>Item</td>
+                    <td>Name</td>
                     <td>Quantity</td>
                     <td>Price</td>
-                    <td></td>
                 </thead>
                 <tbody id="tableBody">
                     <tr>
                         <td>
                         <img src="assets/truffle-burger.png" alt="">
-                        Truffle Burger
                         </td>
-<<<<<<< HEAD
-                        <td>
-                            <button id="decrease-item" onclick="decreaseQuantity()">-</button>
-                            <span>1</span>
-                            <button id="increase-item" onclick="increaseQuantity()">+</button>
-                        </td>
-                        <td>$10.50</td>
-                        <td>
-                        <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
-                        </td>
-=======
                         <td id="cartItem1"></td>
                         <td>
                             <button class="decrease-item" id="minus1">-</button>
@@ -98,7 +85,6 @@
                             <button class="increase-item" id="plus5">+</button>
                         </td>
                         <td id="cartPriceVal5"></td>
->>>>>>> 85880c95b70cf327306614a10d7ad62e823d0f09
                     </tr>
 
                     <tr>
