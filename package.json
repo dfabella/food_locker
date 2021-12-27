@@ -1,0 +1,23 @@
+{
+  "name": "food_locker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cart_script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfabella/food_locker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dfabella/food_locker/issues"
+  },
+  "homepage": "https://github.com/dfabella/food_locker#readme",
+  "dependencies": {
+    "firebase": "^9.6.1"
+  }
+}
