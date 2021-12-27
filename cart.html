@@ -1,3 +1,7 @@
+<!-- Yo ok so when you click "CART" at the top
+    it resets all the values including in the backend, 
+    i made it like that for testing purposes -->
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -8,7 +12,7 @@
    </head>
     <body style="background-color: #40586F;">
 
-        <div class="screenTitle">Cart</div>
+        <div class="screenTitle" id="cartTitle">Cart</div>
 
         <div class="cartPage">
             <table>
@@ -23,19 +27,88 @@
                         <td>
                             <img src="assets/truffle-burger.png" alt="">
                         </td>
-                        <td>Truffle Burger</td>
+                        <td id="cartItem1"></td>
                         <td>
-                            <button class="decrease-item">-</button>
-                            <span>1</span>
-                            <button class="increase-item">+</button>
+                            <button class="decrease-item" id="minus1">-</button>
+                            <span id="amountVal1">0</span>
+                            <button class="increase-item" id="plus1">+</button>
                         </td>
-                        <td>$10.50</td>
+                        <td id="cartPriceVal1"></td>
                     </tr>
+
+                    <tr>
+                        <td>
+                            <img src="assets/truffle-burger.png" alt="">
+                        </td>
+                        <td id="cartItem2"></td>
+                        <td>
+                            <button class="decrease-item" id="minus2">-</button>
+                            <span id="amountVal2">0</span>
+                            <button class="increase-item" id="plus2">+</button>
+                        </td>
+                        <td id="cartPriceVal2"></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="assets/truffle-burger.png" alt="">
+                        </td>
+                        <td id="cartItem3"></td>
+                        <td>
+                            <button class="decrease-item" id="minus3">-</button>
+                            <span id="amountVal3">0</span>
+                            <button class="increase-item" id="plus3">+</button>
+                        </td>
+                        <td id="cartPriceVal3"></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="assets/truffle-burger.png" alt="">
+                        </td>
+                        <td id="cartItem4"></td>
+                        <td>
+                            <button class="decrease-item" id="minus4">-</button>
+                            <span id="amountVal4">0</span>
+                            <button class="increase-item" id="plus4">+</button>
+                        </td>
+                        <td id="cartPriceVal4"></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="assets/truffle-burger.png" alt="">
+                        </td>
+                        <td id="cartItem5"></td>
+                        <td>
+                            <button class="decrease-item" id="minus5">-</button>
+                            <span id="amountVal5">0</span>
+                            <button class="increase-item" id="plus5">+</button>
+                        </td>
+                        <td id="cartPriceVal5"></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="assets/truffle-burger.png" alt="">
+                        </td>
+                        <td id="cartItem6"></td>
+                        <td>
+                            <button class="decrease-item" id="minus6">-</button>
+                            <span id="amountVal6">0</span>
+                            <button class="increase-item" id="plus6">+</button>
+                        </td>
+                        <td id="cartPriceVal6"></td>
+                    </tr>
+
                 </tbody>
             </table>
             <div class="toCheckout">
-                <button class="coBtnWrap">Place order<span id="price">$10.50</span></button>
+                <button class="coBtnWrap">Place order<span id="price">10.50</span></button>
             </div>
         </div>
+
+        <script src="cart_script.js"></script>
+
     </body>
 </html>
