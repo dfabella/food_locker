@@ -137,6 +137,12 @@ cartToggle{
     padding: 10px;
 }
 
+#deleteItem {
+    background-color: none;
+    width: 10px;
+    height: auto;
+}
+
 .cartPage table tbody td img{
     width: 100px;
     height: auto;
@@ -156,6 +162,11 @@ cartToggle{
     color: #151D25;
 
     cursor: pointer;
+}
+
+.cartPage table tbody input {
+    height: 30px;
+    width: auto;
 }
 
 /* checkout button */
@@ -283,7 +294,22 @@ cartToggle{
     padding: 20px;
 }
 
-.orderContainer hr {
+.orderContainer table tbody button{
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: #273F5680;
+
+    font-size: 30px;
+    color: #151D25;
+
+    cursor: pointer;
+}
+
+.orderContainer hr{
     margin: 40px;
 }
 

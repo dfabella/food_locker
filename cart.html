@@ -4,32 +4,35 @@
        <title>Order Placement</title>
         <link rel="stylesheet" href="stylesheet.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
-
+        <script src="./js/orderProgressScript.js"></script>
    </head>
     <body style="background-color: #40586F;">
 
         <div class="screenTitle">Cart</div>
 
         <div class="cartPage">
-            <table>
+            <table id="cartItems">
                 <thead>
                     <td>Item</td>
-                    <td>Name</td>
                     <td>Quantity</td>
                     <td>Price</td>
+                    <td></td>
                 </thead>
                 <tbody id="tableBody">
                     <tr>
                         <td>
-                            <img src="assets/truffle-burger.png" alt="">
+                        <img src="assets/truffle-burger.png" alt="">
+                        Truffle Burger
                         </td>
-                        <td>Truffle Burger</td>
                         <td>
-                            <button class="decrease-item">-</button>
+                            <button id="decrease-item" onclick="decreaseQuantity()">-</button>
                             <span>1</span>
-                            <button class="increase-item">+</button>
+                            <button id="increase-item" onclick="increaseQuantity()">+</button>
                         </td>
                         <td>$10.50</td>
+                        <td>
+                        <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                        </td>
                     </tr>
                 </tbody>
             </table>

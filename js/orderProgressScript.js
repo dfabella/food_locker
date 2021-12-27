@@ -2,26 +2,33 @@ let timeout;
 var i = 0;
 
 function completeOrder() {
-    timeout = setTimeout(load, 1000);
+    timeout = setTimeout(load, 1500);
 }
+
 function load() {
-    if (i = 0) {
+    if (i === 0) {
         i = 1;
-        var elem = document.getElementByID("progressFill");
+        var elem = document.getElementById('progressFill');
+        var progressText = document.getElementById('confirmedText');
         var width = 1;
         var id = setInterval(frame, 10);
+    }
         function frame() {
-            if (width >= 100) {
-                document.getElementByID('ready').src="./assets/order-ready1.png"// change end icon to icon1
+            if (width >= 93) {
+                document.getElementById('ready').src="./assets/order-ready1.png";
+                progressText.textContent = "Order Ready For Pick-Up!";
                 clearInterval(id);
-                i = 0;
+                i = 1;
             } else {
-                if (elem.style.width == 50%) {
-                    document.getElementByID('preparing').src="./assets/order-preparing1.png"// change end icon to icon1
+                if (elem.style.width == "46%") {
+                    document.getElementById('preparing').src="./assets/order-preparing1.png";
+                    progressText.textContent = "Order Preparing...";
+                    width++;
+                    elem.style.width = width + "%";
                 } else {
-                width++;
+                width += 0.2;
                 elem.style.width = width + "%";
                 }
             }
-    }
+        }
 }
