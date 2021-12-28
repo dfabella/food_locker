@@ -7,9 +7,11 @@
    <head>
        <title>Order Placement</title>
         <link rel="stylesheet" href="stylesheet.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
    </head>
+
     <body style="background-color: #40586F;">
+        <input type="image" src="./assets/to-menu.png" class="toMenu" onclick="location.href='menu.html'">
+        <img class="topRightLogo" src="./assets/logo.png" alt="food locker logo">
 
         <div class="screenTitle" id="cartTitle">Cart</div>
 
@@ -20,6 +22,7 @@
                     <td>Name</td>
                     <td>Quantity</td>
                     <td>Price</td>
+                    <td></td>
                 </thead>
                 <tbody id="tableBody">
                     <tr id="tr1">
@@ -33,6 +36,9 @@
                             <button class="increase-item" id="plus1">+</button>
                         </td>
                         <td id="cartPriceVal1"></td>
+                        <td>
+                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                        </td>
                     </tr>
 
                     <tr id="tr2">
@@ -46,6 +52,10 @@
                             <button class="increase-item" id="plus2">+</button>
                         </td>
                         <td id="cartPriceVal2"></td>
+                        <td>
+                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                        </td>
+
                     </tr>
 
                     <tr id="tr3">
@@ -59,6 +69,9 @@
                             <button class="increase-item" id="plus3">+</button>
                         </td>
                         <td id="cartPriceVal3"></td>
+                        <td>
+                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                        </td>
                     </tr>
 
                     <tr id="tr4">
@@ -72,6 +85,9 @@
                             <button class="increase-item" id="plus4">+</button>
                         </td>
                         <td id="cartPriceVal4"></td>
+                        <td>
+                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                        </td>
                     </tr>
 
                     <tr id="tr5">
@@ -85,6 +101,9 @@
                             <button class="increase-item" id="plus5">+</button>
                         </td>
                         <td id="cartPriceVal5"></td>
+                        <td>
+                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                        </td>
                     </tr>
 
                     <tr id="tr6">
@@ -98,12 +117,15 @@
                             <button class="increase-item" id="plus6">+</button>
                         </td>
                         <td id="cartPriceVal6"></td>
+                        <td>
+                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                        </td>
                     </tr>
 
                 </tbody>
             </table>
             <div class="toCheckout">
-                <button class="coBtnWrap">Place order<span id="price">10.50</span></button>
+                <button class="coBtnWrap" onclick="toOrderProg()">Place order<span id="price">10.50</span></button>
             </div>
         </div>
 

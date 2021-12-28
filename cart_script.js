@@ -66,6 +66,39 @@ const totalPrice = document.getElementById('price');
 
 totalPrice.innerText = sum.toFixed(2);
 
+//DELETE ITEM
+function deleteItem(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    var name = document.getElementById("cartItem" + i).innerText; //get item's name
+
+    // retrieve key names to delete based on item's name
+    let toDeleteID = "";
+    for(let i = 1; i <= spaces.length; i++) {
+        let keyVal = localStorage.getItem("name" + i);
+        if (keyVal === name) {
+            toDeleteID = i.toString();
+        }
+    }
+
+    // delete those key names from localStorage
+    const itemDetails = ["name", "newPrice"];
+    const amounts = ["","a", "b", "c", "d", "e", "f"]
+    for(const itemDetail of itemDetails) {
+        localStorage.removeItem(itemDetail + toDeleteID);
+        localStorage.removeItem(amounts[toDeleteID]);
+    }
+
+    location.reload();
+}
+
+//PlACE ORDER
+function toOrderProg() {
+    if (totalPrice.innerText != "0.00") {
+        window.location.href = 'orderProgress.html';
+    }
+
+}
+
 const clearButton = document.getElementById('cartTitle');
 clearButton.addEventListener("click", ()=>{
     localStorage.clear();
