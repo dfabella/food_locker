@@ -46,7 +46,8 @@ function updateCart(name, price, amount) {
   }
 }
 
-//CLEARS CART ON INITIALIZATION
+/*----------hide item rows on initalization----------*/
+/*--------------------------------------------------*/
 for(let i = 0; i < spaces.length; i++){
   trIDs[i].style.visibility="hidden";
 }
@@ -80,7 +81,6 @@ function findItemNum(itemName) {
 
 /*--------increment and decrement quantity--------*/
 /*--------------------------------------------------*/
-
 function adjQuant (r, operator) {
     var id = r.parentNode.parentNode.rowIndex;
     count = document.getElementById("amountVal" + id),
@@ -94,7 +94,9 @@ function adjQuant (r, operator) {
     if (operator === '+') {
         ++a;
     } else if (operator === '-') {
+        if(a > 1){
         --a;
+        }
     }
 
     newPrice = a * price;
@@ -102,195 +104,14 @@ function adjQuant (r, operator) {
     priceVal.innerText = newPrice.toFixed(2);
 
     let itemNum = findItemNum(name);
-    localStorage.setItem(String.fromCharCode(96 + itemNum), a);
+    localStorage.setItem(String.fromCharCode(96 + Number(itemNum)), a);
     localStorage.setItem("newPrice"+itemNum, newPrice);
+
+    location.reload();
 }
 
-//  //ITEM 1
-//  const plus = document.getElementById('plus1'),
-//  minus = document.getElementById('minus1'),
-//  count = document.getElementById('amountVal1'),
-//  priceVal1 = document.getElementById('cartPriceVal1'),
-//  name = document.getElementById('cartItem1').innerText;
-//
-// let a = Number(count.innerText);
-// let price1 = Number(priceVal1.innerText) / a;
-// let newPrice1 = price1;
-//
-// plus.addEventListener("click", ()=>{
-//     a++;
-//     newPrice1 = a * price1;
-//
-//     count.innerText = a;
-//     priceVal1.innerText = newPrice1.toFixed(2);
-//
-//     localStorage.setItem("a", a);
-//     localStorage.setItem("newPrice1", newPrice1);
-//
-//     console.log(a);
-//     console.log(newPrice1);
-//
-//     location.reload();
-//
-// });
-//
-// minus.addEventListener("click", ()=>{
-//     if(a > 1){
-//         a--;
-//         newPrice1 = a * price1;
-//         priceVal1.innerText = "";
-//         priceVal1.innerText = newPrice1.toFixed(2);
-//     }
-//     count.innerText = a;
-//
-//     localStorage.setItem("a", a);
-//     localStorage.setItem("newPrice1", newPrice1);
-//
-//     console.log(a);
-//     console.log(newPrice1);
-//
-//     location.reload();
-// });
-//
-// //ITEM 2
-// const plus2 = document.getElementById('plus2'),
-//  minus2 = document.getElementById('minus2'),
-//  count2 = document.getElementById('amountVal2'),
-//  priceVal2 = document.getElementById('cartPriceVal2'),
-//  name2 = document.getElementById('cartItem2').innerText;
-//
-// let b = Number(count2.innerText);
-// let price2 = Number(priceVal2.innerText) / b;
-// let newPrice2 = price2;
-//
-// plus2.addEventListener("click", ()=>{
-//     b++;
-//     newPrice2 = b * price2;
-//
-//     count2.innerText = b;
-//     priceVal2.innerText = newPrice2.toFixed(2);
-//
-//     localStorage.setItem("b", b);
-//     localStorage.setItem("newPrice2", newPrice2);
-//
-//     console.log(b);
-//     console.log(newPrice2);
-//
-//     location.reload();
-//
-// });
-//
-// minus2.addEventListener("click", ()=>{
-//     if(b > 1){
-//         b--;
-//         newPrice2 = b * price2;
-//         priceVal2.innerText = "";
-//         priceVal2.innerText = newPrice2.toFixed(2);
-//     }
-//     count2.innerText = b;
-//
-//     localStorage.setItem("b", b);
-//     localStorage.setItem("newPrice2", newPrice2);
-//
-//     console.log(b);
-//     console.log(newPrice2);
-//
-//     location.reload();
-// });
-//
-// //ITEM 3
-// const plus3 = document.getElementById('plus3'),
-//  minus3 = document.getElementById('minus3'),
-//  count3 = document.getElementById('amountVal3'),
-//  priceVal3 = document.getElementById('cartPriceVal3'),
-//  name3 = document.getElementById('cartItem3').innerText;
-//
-// let c = Number(count3.innerText);
-// let price3 = Number(priceVal3.innerText) / c;
-// let newPrice3 = price3;
-//
-// plus3.addEventListener("click", ()=>{
-//     c++;
-//     newPrice3 = c * price3;
-//
-//     count3.innerText = c;
-//     priceVal3.innerText = newPrice3.toFixed(2);
-//
-//     localStorage.setItem("c", c);
-//     localStorage.setItem("newPrice3", newPrice3);
-//
-//     console.log(c);
-//     console.log(newPrice3);
-//
-//     location.reload();
-//
-// });
-//
-// minus3.addEventListener("click", ()=>{
-//     if(c > 1){
-//         c--;
-//         newPrice3 = c * price3;
-//         priceVal3.innerText = "";
-//         priceVal3.innerText = newPrice3.toFixed(2);
-//     }
-//     count3.innerText = c;
-//
-//     localStorage.setItem("c", c);
-//     localStorage.setItem("newPrice3", newPrice3);
-//
-//     console.log(c);
-//     console.log(newPrice3);
-//
-//     location.reload();
-// });
-//
-// //ITEM 4
-// const plus4 = document.getElementById('plus4'),
-//  minus4 = document.getElementById('minus4'),
-//  count4 = document.getElementById('amountVal4'),
-//  priceVal4 = document.getElementById('cartPriceVal4'),
-//  name4 = document.getElementById('cartItem4').innerText;
-//
-// let d = Number(count4.innerText);
-// let price4 = Number(priceVal4.innerText) / d;
-// let newPrice4 = price4;
-//
-// plus4.addEventListener("click", ()=>{
-//     d++;
-//     newPrice4 = d * price4;
-//
-//     count4.innerText = d;
-//     priceVal4.innerText = newPrice4.toFixed(2);
-//
-//     localStorage.setItem("d", d);
-//     localStorage.setItem("newPrice4", newPrice4);
-//
-//     console.log(d);
-//     console.log(newPrice4);
-//
-//     location.reload();
-//
-// });
-//
-// minus4.addEventListener("click", ()=>{
-//     if(d > 1){
-//         d--;
-//         newPrice4 = d * price4;
-//         priceVal4.innerText = "";
-//         priceVal4.innerText = newPrice4.toFixed(2);
-//     }
-//     count4.innerText = d;
-//
-//     localStorage.setItem("d", d);
-//     localStorage.setItem("newPrice4", newPrice4);
-//
-//     console.log(d);
-//     console.log(newPrice4);
-//
-//     location.reload();
-// });
-
-//DELETE ITEM
+/*-------------------delete Item---------------------*/
+/*--------------------------------------------------*/
 function deleteItem(r) {
     var i = r.parentNode.parentNode.rowIndex;
     var name = document.getElementById("cartItem" + i).innerText; //get item's name
@@ -305,7 +126,8 @@ function deleteItem(r) {
     location.reload();
 }
 
-//PlACE ORDER
+/*-------------------place order---------------------*/
+/*--------------------------------------------------*/
 function toOrderProg() {
     if (totalPrice.innerText != "0.00") {
         window.location.href = 'orderProgress.html';
