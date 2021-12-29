@@ -21,7 +21,7 @@ html, body {
     padding: 50px;
 }
 
-.toMenu {
+#toMenu {
     position: absolute;
     top: 0px;
     padding: 30px;
@@ -90,7 +90,7 @@ cartToggle{
 
 /* main contents of cart */
 .screenTitle {
-    margin-top: 25%;
+    margin-top: 35%;
     font-family: Montserrat;
     font-weight: bold;
     font-size: 72px;
@@ -176,9 +176,8 @@ cartToggle{
     display: flex;
     justify-content: space-between;
     padding: 20px 25px;
-    margin-bottom: 10vw;
 
-    background-color: #40586F;
+    background-color: #D35749;
     border: 5px solid #D35749;
     border-radius: 50px;
 
@@ -188,9 +187,9 @@ cartToggle{
 
 .toCheckout button{
     position: absolute;
-    width: 90%;
-    left: 5%;
-    bottom: -50vw;
+    width: 85%;
+    left: 7.5%;
+    bottom: 13%;
 
     font-size: 50px;
     text-transform: uppercase;
@@ -203,15 +202,6 @@ cartToggle{
 
 
 /* order progress screen classes */
-.detailsTitle {
-    margin-top: 33%;
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 72px;
-    color: white;
-    text-align: center;
-}
-
 #confirmedText {
     position: relative;
     top: 70px;

@@ -14,16 +14,17 @@ function load() {
         var id = setInterval(frame, 10);
     }
         function frame() {
-            if (width >= 93) {
+            if (width >= 96) {
                 document.getElementById('ready').src="./assets/order-ready1.png";
                 progressText.textContent = "Order Ready For Pick-Up!"
                 clearInterval(id);
-                i = 1;
+
             } else if (width == 46){
                 document.getElementById('preparing').src="./assets/order-preparing1.png";
                 progressText.textContent = "Order Preparing...";
-                width++;
+                width += 0.2;
                 elem.style.width = width + "%";
+
             } else {
             width += 0.2;
             elem.style.width = width + "%";

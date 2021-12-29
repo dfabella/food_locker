@@ -19,12 +19,10 @@
 
 .toCart {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    padding: 15px;
-    margin: auto;
+    top: 15px;
+    right: 30px;
 
-    width: 25%;
+    width: 16%;
     background: none;
     border: none;
 
@@ -47,7 +45,7 @@
 
 .items .heading{
     position: absolute;
-    top: 10%;
+    top: 12%;
     left: 50%;
     font-size: 50px;
     text-align: center;

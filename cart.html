@@ -5,12 +5,12 @@
 <!DOCTYPE html>
 <html>
    <head>
-       <title>Order Placement</title>
+       <title>Cart</title>
         <link rel="stylesheet" href="stylesheet.css">
    </head>
 
     <body style="background-color: #40586F;">
-        <input type="image" src="./assets/to-menu.png" class="toMenu" onclick="location.href='menu.html'">
+        <input type="image" src="./assets/to-menu.png" id="toMenu" onclick="location.href='menu.html'">
         <img class="topRightLogo" src="./assets/logo.png" alt="food locker logo">
 
         <div class="screenTitle" id="cartTitle">Cart</div>
@@ -105,9 +105,10 @@
 
                 </tbody>
             </table>
-            <div class="toCheckout">
-                <button class="coBtnWrap" onclick="toOrderProg()">Place order<span id="price">10.50</span></button>
-            </div>
+        </div>
+
+        <div class="toCheckout">
+            <button class="coBtnWrap" onclick="toOrderProg()">Place order<span id="price">10.50</span></button>
         </div>
 
         <script src="cart_script.js"></script>

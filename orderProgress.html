@@ -3,14 +3,13 @@
     <head>
        <title>Order Progress</title>
         <link rel="stylesheet" href="stylesheet.css">
-        <script src="./js/orderProgressScript.js"></script>
     </head>
 
     <body onload="completeOrder()">
-        <input type="image" src="./assets/to-menu.png" class="toMenu" onclick="location.href='menu.html'">
+        <input type="image" src="./assets/to-menu.png" id="toMenu" onclick="location.href='menu.html'">
         <img class="topRightLogo" src="./assets/logo.png" alt="food locker logo">
 
-        <div class="detailsTitle">Order Details</div>
+        <div class="screenTitle">Order Details</div>
 
         <div class="bottomContainer">
 
@@ -87,7 +86,7 @@
 
                 </div>
 
-
+            <script src="./js/orderProgressScript.js"></script>
             <script src="cart_script.js"></script>
 
     </body>
