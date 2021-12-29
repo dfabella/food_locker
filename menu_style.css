@@ -22,10 +22,9 @@
     top: 15px;
     right: 30px;
 
-    width: 16%;
+    width: 80px;
     background: none;
     border: none;
-
 }
 
 .menu_page{
@@ -39,10 +38,36 @@
     background: #40586F;
 }
 
+/* splash screen classes */
+.splashScreen {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+    background: #283D51;
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#welcome {
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+#welcome.fade {
+    opacity: 0;
+}
+/* end of splash screen classes */
+
+
 /*------------------------*/
 /*----Item Adjustments----*/
 /*------------------------*/
-
 .items .heading{
     position: absolute;
     top: 12%;
