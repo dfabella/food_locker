@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-   <head>
+    <head>
        <title>Order Progress</title>
         <link rel="stylesheet" href="stylesheet.css">
         <script src="./js/orderProgressScript.js"></script>
- </head>
+    </head>
 
     <body onload="completeOrder()">
         <input type="image" src="./assets/to-menu.png" class="toMenu" onclick="location.href='menu.html'">
@@ -24,6 +24,75 @@
                 </div>
 
             <div class="orderContainer">
+                <table>
+                    <thead>
+                        <td>Quantity</td>
+                        <td>Name</td>
+                        <td>Price</td>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr id="tr1">
+                            <td id="amountVal1">0</td>
+                            <td id="cartItem1"></td>
+                            <td id="cartPriceVal1"></td>
+                        </tr>
+
+                        <tr id="tr2">
+                            <td id="amountVal2">0</td>
+                            <td id="cartItem2"></td>
+                            <td id="cartPriceVal2"></td>
+                        </tr>
+
+                        <tr id="tr3">
+                            <td id="amountVal3">0</td>
+                            <td id="cartItem3"></td>
+                            <td id="cartPriceVal3"></td>
+                        </tr>
+
+                        <tr id="tr4">
+                            <td id="amountVal4">0</td>
+                            <td id="cartItem4"></td>
+                            <td id="cartPriceVal4"></td>
+                        </tr>
+
+                        <tr id="tr5">
+                            <td id="amountVal5">0</td>
+                            <td id="cartItem5"></td>
+                            <td id="cartPriceVal5"></td>
+                        </tr>
+
+                        <tr id="tr6">
+                            <td id="amountVal6">0</td>
+                            <td id="cartItem6"></td>
+                            <td id="cartPriceVal6"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <hr color="black">
+
+
+                <div id="pickupInfoContainer">
+                    <div id="totalText">Total: <span id="price">0</span></div>
+
+                        <div class="lockerNumContainer">
+                            <p>
+                            Locker Number: <span id="lockerPinText">7</span>
+                            <br>
+                            Order Pin: <span id="lockerPinText">1922</span>
+                            </p>
+                    </div>
+                </div>
+
+                </div>
+
+
+            <script src="cart_script.js"></script>
+
+    </body>
+</html>
+            <!-- <div class="orderContainer">
                 <script src="cart_script.js"></script>
 
                 <table>
@@ -33,11 +102,37 @@
                         <td>Price</td>
                     </thead>
                     <tbody id="tableBody">
-                        <tr>
-                            <td id="amountVal1">0</td>
-                            <td id="cartItem1"></td>
-                            <td id="cartPriceVal1"></td>
+                        <tr id="tr1">
+                            <td id="amountVal2"></td>
+                            <td id="cartItem2"></td>
+                            <td id="cartPriceVal2"></td>
                         </tr>
+                        <tr id="tr2">
+                            <td id="amountVal2"></td>
+                            <td id="cartItem2"></td>
+                            <td id="cartPriceVal2"></td>
+                        </tr>
+                        <tr id="tr3">
+                            <td id="amountVal3"></td>
+                            <td id="cartItem3"></td>
+                            <td id="cartPriceVal3"></td>
+                        </tr>
+                        <tr id="tr4">
+                            <td id="amountVal4"></td>
+                            <td id="cartItem4"></td>
+                            <td id="cartPriceVal4"></td>
+                        </tr>
+                        <tr id="tr5">
+                            <td id="amountVal5"></td>
+                            <td id="cartItem5"></td>
+                            <td id="cartPriceVal5"></td>
+                        </tr>
+                        <tr id="tr6">
+                            <td id="amountVal6"></td>
+                            <td id="cartItem6"></td>
+                            <td id="cartPriceVal6"></td>
+                        </tr>
+
                     </tbody>
                 </table>
 
@@ -55,4 +150,4 @@
         </div>
 
     </body>
-</html>
+</html> -->

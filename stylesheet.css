@@ -257,9 +257,9 @@ cartToggle{
 
 .bottomContainer {
     margin-top: 10%;
-    height: 200vw;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
+    height: 160vw;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 60px;
 }
 
 /* order contents */
@@ -269,10 +269,11 @@ cartToggle{
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 90vw;
-    height: 70vw;
+    width: 80%;
+    height: auto;
+    padding: 30px;
 
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
 
     font-family: Montserrat;
@@ -298,63 +299,51 @@ cartToggle{
     padding: 20px;
 }
 
-.orderContainer table tbody button{
-    margin: 0 5px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    outline: none;
-    border: none;
-    background: #273F5680;
-
-    font-size: 30px;
-    color: #151D25;
-
-    cursor: pointer;
-}
-
 .orderContainer hr{
     margin: 40px;
 }
 
-.totalText {
-    padding: 5px 30px;
-    font-size: 35px;
-    font-family: Montserrat;
-    float: right;
-}
-
-.pickupInfoContainer {
-    position: absolute;
-    bottom: 40px;
+#pickupInfoContainer {
+    bottom: 0;
     margin: auto;
 
     width: 100%;
     height: auto;
 }
 
-.lockerNumContainer {
-    position: absolute;
-    bottom: 0;
-    left: 5%;
-    width: 90%;
-    height: 200px;
+#totalText {
+    margin-bottom: 100px;
+    margin-right: 30px;
 
-    background: #40586F;
+    text-align: right;
+    font-size: 40px;
+    font-family: Montserrat;
+}
+
+
+.lockerNumContainer {
+    margin: auto;
+    align-content: space-between;
+
+    width: 85%;
+    background: none;
     border-radius: 40px;
 
     text-align: center;
     font-size: 38px;
+    font-weight: bold;
     font-family: Montserrat;
-    color: white;
-    font-weight: 600;
+    color: #D35749;
 }
 
+.lockerNumContainer p {
+    padding: 20px;
+}
 
 #lockerPinText {
     font-size: 48px;
     font-weight: 700;
-    color: white;
+    color: #D35749;
 }
 
 /* end of order progress screen classes */
