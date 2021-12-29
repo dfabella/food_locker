@@ -124,7 +124,6 @@ cartToggle{
 
 .cartPage tr{
     height: 12vw;
-    border-bottom: 1px dotted #273F56;
 }
 
 .cartPage table thead td{
