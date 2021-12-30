@@ -4,114 +4,152 @@
 
 <!DOCTYPE html>
 <html>
-   <head>
-       <title>Cart</title>
-        <link rel="stylesheet" href="stylesheet.css">
-   </head>
 
-    <body style="background-color: #40586F;">
-        <input type="image" src="./assets/to-menu.png" id="toMenu" onclick="location.href='menu.html'">
-        <img class="topRightLogo" src="./assets/logo.png" alt="food locker logo" onclick="location.href='splashScreen.html'">
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
 
-        <div class="screenTitle" id="cartTitle">Cart</div>
+<!-- Firebase API -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+    import { getDatabase, ref, set, remove, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
 
-        <div class="cartPage">
-            <table id="cartItems">
-                <thead>
-                    <td>Name</td>
-                    <td>Quantity</td>
-                    <td>Price</td>
-                    <td></td>
-                </thead>
-                <tbody id="tableBody">
-                    <tr id="tr1">
-                        <td id="cartItem1"></td>
-                        <td>
-                            <button onclick="adjQuant(this, '-')">-</button>
-                            <span id="amountVal1">0</span>
-                            <button onclick="adjQuant(this, '+')">+</button>
-                        </td>
-                        <td id="cartPriceVal1"></td>
-                        <td>
-                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
-                        </td>
-                    </tr>
+    const firebaseConfig = {
+        apiKey: "AIzaSyC7oLVnl-tJNTiKmYz2dl6q-htaAnD3qyY",
+        authDomain: "alpha-beta-food-locker.firebaseapp.com",
+        databaseURL: "https://alpha-beta-food-locker-default-rtdb.firebaseio.com",
+        projectId: "alpha-beta-food-locker",
+        storageBucket: "alpha-beta-food-locker.appspot.com",
+        messagingSenderId: "557847595",
+        appId: "1:557847595:web:6584f577fcd5a9ed01866e",
+        measurementId: "G-KC6KFEXSNN"
+    };
 
-                    <tr id="tr2">
-                        <td id="cartItem2"></td>
-                        <td>
-                            <button onclick="adjQuant(this, '-')">-</button>
-                            <span id="amountVal2">0</span>
-                            <button onclick="adjQuant(this, '+')">+</button>
-                        </td>
-                        <td id="cartPriceVal2"></td>
-                        <td>
-                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
-                        </td>
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
 
-                    </tr>
+    function addToFirebase() {
+        let foodOrderCombined = combineFoodOrder();
 
-                    <tr id="tr3">
-                        <td id="cartItem3"></td>
-                        <td>
-                            <button onclick="adjQuant(this, '-')">-</button>
-                            <span id="amountVal3">0</span>
-                            <button onclick="adjQuant(this, '+')">+</button>
-                        </td>
-                        <td id="cartPriceVal3"></td>
-                        <td>
-                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
-                        </td>
-                    </tr>
+        assignLockerAndPin();
+        set(ref(database, 'current_orders/' + pin), {
+            LockerNumber: lockerNum,
+            OrderProgress: 'Processing',
+            FoodOrder: foodOrderCombined
+        }).then(() => {
+            toOrderProg();
+        });
+    }
 
-                    <tr id="tr4">
-                        <td id="cartItem4"></td>
-                        <td>
-                            <button onclick="adjQuant(this, '-')">-</button>
-                            <span id="amountVal4">0</span>
-                            <button onclick="adjQuant(this, '+')">+</button>
-                        </td>
-                        <td id="cartPriceVal4"></td>
-                        <td>
-                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
-                        </td>
-                    </tr>
+    window.addToFirebase = addToFirebase;
+</script>
 
-                    <tr id="tr5">
-                        <td id="cartItem5"></td>
-                        <td>
-                            <button onclick="adjQuant(this, '-')">-</button>
-                            <span id="amountVal5">0</span>
-                            <button onclick="adjQuant(this, '+')">+</button>
-                        </td>
-                        <td id="cartPriceVal5"></td>
-                        <td>
-                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
-                        </td>
-                    </tr>
+<body style="background-color: #40586F;">
+    <input type="image" src="./assets/to-menu.png" id="toMenu" onclick="location.href='menu.html'">
+    <img class="topRightLogo" src="./assets/logo.png" alt="food locker logo"
+        onclick="location.href='splashScreen.html'">
 
-                    <tr id="tr6">
-                        <td id="cartItem6"></td>
-                        <td>
-                            <button onclick="adjQuant(this, '-')">-</button>
-                            <span id="amountVal6">0</span>
-                            <button onclick="adjQuant(this, '+')">+</button>
-                        </td>
-                        <td id="cartPriceVal6"></td>
-                        <td>
-                            <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
-                        </td>
-                    </tr>
+    <div class="screenTitle" id="cartTitle">Cart</div>
 
-                </tbody>
-            </table>
-        </div>
+    <div class="cartPage">
+        <table id="cartItems">
+            <thead>
+                <td>Name</td>
+                <td>Quantity</td>
+                <td>Price</td>
+                <td></td>
+            </thead>
+            <tbody id="tableBody">
+                <tr id="tr1">
+                    <td id="cartItem1"></td>
+                    <td>
+                        <button onclick="adjQuant(this, '-')">-</button>
+                        <span id="amountVal1">0</span>
+                        <button onclick="adjQuant(this, '+')">+</button>
+                    </td>
+                    <td id="cartPriceVal1"></td>
+                    <td>
+                        <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                    </td>
+                </tr>
 
-        <div class="toCheckout">
-            <button class="coBtnWrap" onclick="toOrderProg()">Place order<span id="price">10.50</span></button>
-        </div>
+                <tr id="tr2">
+                    <td id="cartItem2"></td>
+                    <td>
+                        <button onclick="adjQuant(this, '-')">-</button>
+                        <span id="amountVal2">0</span>
+                        <button onclick="adjQuant(this, '+')">+</button>
+                    </td>
+                    <td id="cartPriceVal2"></td>
+                    <td>
+                        <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                    </td>
 
-        <script src="cart_script.js"></script>
+                </tr>
 
-    </body>
+                <tr id="tr3">
+                    <td id="cartItem3"></td>
+                    <td>
+                        <button onclick="adjQuant(this, '-')">-</button>
+                        <span id="amountVal3">0</span>
+                        <button onclick="adjQuant(this, '+')">+</button>
+                    </td>
+                    <td id="cartPriceVal3"></td>
+                    <td>
+                        <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                    </td>
+                </tr>
+
+                <tr id="tr4">
+                    <td id="cartItem4"></td>
+                    <td>
+                        <button onclick="adjQuant(this, '-')">-</button>
+                        <span id="amountVal4">0</span>
+                        <button onclick="adjQuant(this, '+')">+</button>
+                    </td>
+                    <td id="cartPriceVal4"></td>
+                    <td>
+                        <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                    </td>
+                </tr>
+
+                <tr id="tr5">
+                    <td id="cartItem5"></td>
+                    <td>
+                        <button onclick="adjQuant(this, '-')">-</button>
+                        <span id="amountVal5">0</span>
+                        <button onclick="adjQuant(this, '+')">+</button>
+                    </td>
+                    <td id="cartPriceVal5"></td>
+                    <td>
+                        <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                    </td>
+                </tr>
+
+                <tr id="tr6">
+                    <td id="cartItem6"></td>
+                    <td>
+                        <button onclick="adjQuant(this, '-')">-</button>
+                        <span id="amountVal6">0</span>
+                        <button onclick="adjQuant(this, '+')">+</button>
+                    </td>
+                    <td id="cartPriceVal6"></td>
+                    <td>
+                        <input type="image" src="./assets/delete-icon.png" onclick="deleteItem(this)">
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="toCheckout">
+        <button class="coBtnWrap" onclick="addToFirebase()">Place order<span id="price">10.50</span></button>
+    </div>
+
+    <script src="cart_script.js"></script>
+
+</body>
+
 </html>
