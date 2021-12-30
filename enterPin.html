@@ -7,7 +7,8 @@
    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
 </head>
 
-<script id="Firebase" type="module">
+<!-- Firebase API -->
+<script type="module">
    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
    import { getDatabase, ref, set, remove, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
 
@@ -41,7 +42,7 @@
          }
       })
    }
-
+   
    window.removeOrder = removeOrder;
    window.dbHasPin = dbHasPin;
 </script>
@@ -72,29 +73,6 @@
 
 </body>
 
-<script id="PinFunctions">
-   function buttonClick(click_value) {
-      let ele = document.getElementById('pinEntry');
-      ele.innerHTML += click_value;
-   }
-
-   function clearPin() {
-      let ele = document.getElementById('pinEntry');
-      ele.innerHTML = "PIN: ";
-   }
-
-   function unlockLocker() {
-      let ele = document.getElementById('pinEntry');
-      let splitEle = ele.innerHTML.split('PIN: ');
-      let finalPin = splitEle[1];
-
-      if (finalPin.length != 4) {
-         alert("PIN must be 4 digits long!");
-         clearPin();
-      } else {
-         dbHasPin(finalPin);
-      }
-   }
-</script>
+<script src="enterPin_script.js"></script>
 
 </html>
