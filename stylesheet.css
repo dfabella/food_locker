@@ -400,7 +400,7 @@ cartToggle{
 
 /* enter pin screen classes*/
 .popupContainer {
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 51%;
     width: 100%;
@@ -409,7 +409,7 @@ cartToggle{
 }
 
 .centerInnerRectangle {
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 45%;
     width: 85%;
