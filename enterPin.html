@@ -1,18 +1,100 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Enter Pin Screen</title>
-      <link rel="stylesheet" href="stylesheet.css" />
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
-   </head>
-   <body style="background-color:#40586F;">
 
-    <div class="popupContainer">
-        <img src="./assets/enter-pin-popup-bkgrd.png" class="popupContainer" alt="pop up window" >
-        <img src="./assets/inner-rectangle-bkgrd.png" class="centerInnerRectangle" alt="inner-rectangle" >
-        <div class="pinText">Enter pin to unlock locker</div>
-        <div class="codeText">____ ____ ____ ____</div>
-    </div>
+<head>
+   <title>Enter Pin Screen</title>
+   <link rel="stylesheet" href="stylesheet.css" />
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
+</head>
 
-   </body>
+<script id="Firebase" type="module">
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+   import { getDatabase, ref, set, remove, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+
+   const firebaseConfig = {
+      apiKey: "AIzaSyC7oLVnl-tJNTiKmYz2dl6q-htaAnD3qyY",
+      authDomain: "alpha-beta-food-locker.firebaseapp.com",
+      databaseURL: "https://alpha-beta-food-locker-default-rtdb.firebaseio.com",
+      projectId: "alpha-beta-food-locker",
+      storageBucket: "alpha-beta-food-locker.appspot.com",
+      messagingSenderId: "557847595",
+      appId: "1:557847595:web:6584f577fcd5a9ed01866e",
+      measurementId: "G-KC6KFEXSNN"
+   };
+
+   const app = initializeApp(firebaseConfig);
+   const database = getDatabase(app);
+
+   function removeOrder(pinCode) {
+      remove(ref(database, 'current_orders/' + pinCode));
+   }
+
+   function dbHasPin(pinCode) {
+      get(ref(database, 'current_orders/' + pinCode)).then((snapshot) => {
+         if (snapshot.exists()) {
+            // MOVES ONTO OPENING LOCKER FUNCTIONS
+            removeOrder(pinCode);
+            clearPin();
+         } else {
+            alert("Invalid PIN Code! Please try again.");
+            clearPin();
+         }
+      })
+   }
+
+   window.removeOrder = removeOrder;
+   window.dbHasPin = dbHasPin;
+</script>
+
+<body style="background-color:#40586F;">
+
+
+   <div>
+      <img src="./assets/enter-pin-popup-bkgrd.png" class="popupContainer" alt="pop up window">
+      <img src="./assets/inner-rectangle-bkgrd.png" class="centerInnerRectangle" alt="inner-rectangle">
+      <div class="pinText">Enter 4-digit pin to unlock locker!</div>
+      <div class="codeText" id='pinEntry'>PIN: </div>
+
+      <input type='button' id="one" onclick="buttonClick(this.value)" value='1'>
+      <input type='button' id="two" onclick="buttonClick(this.value)" value='2'>
+      <input type='button' id="three" onclick="buttonClick(this.value)" value='3'> <br><br>
+      <input type='button' id="four" onclick="buttonClick(this.value)" value='4'>
+      <input type='button' id="five" onclick="buttonClick(this.value)" value='5'>
+      <input type='button' id="six" onclick="buttonClick(this.value)" value='6'> <br><br>
+      <input type='button' id="seven" onclick="buttonClick(this.value)" value='7'>
+      <input type='button' id="eight" onclick="buttonClick(this.value)" value='8'>
+      <input type='button' id="nine" onclick="buttonClick(this.value)" value='9'> <br><br>
+      <input type='button' id="clear" onclick="clearPin()" value='CLEAR'>
+      <input type='button' id="zero" onclick="buttonClick(this.value)" value='0'>
+      <input type='button' id="unlock" onclick="unlockLocker()" value='UNLOCK'>
+
+   </div>
+
+</body>
+
+<script id="PinFunctions">
+   function buttonClick(click_value) {
+      let ele = document.getElementById('pinEntry');
+      ele.innerHTML += click_value;
+   }
+
+   function clearPin() {
+      let ele = document.getElementById('pinEntry');
+      ele.innerHTML = "PIN: ";
+   }
+
+   function unlockLocker() {
+      let ele = document.getElementById('pinEntry');
+      let splitEle = ele.innerHTML.split('PIN: ');
+      let finalPin = splitEle[1];
+
+      if (finalPin.length != 4) {
+         alert("PIN must be 4 digits long!");
+         clearPin();
+      } else {
+         dbHasPin(finalPin);
+      }
+   }
+</script>
+
 </html>
