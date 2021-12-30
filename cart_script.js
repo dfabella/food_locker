@@ -133,3 +133,32 @@ function toOrderProg() {
         window.location.href = 'orderProgress.html';
     }
 }
+
+//concats food order for one line description
+function combineFoodOrder() {
+    oneLineOrder = "";
+
+    for (let i = 0; i < spaces.length; i++) {
+        if (amounts[i].innerText == 0) {
+            break;
+        }
+
+        if (i > 0) {
+            oneLineOrder = oneLineOrder.concat(", ");
+        }
+
+        oneLineOrder = oneLineOrder.concat(spaces[i].innerText, " x", amounts[i].innerText);
+
+        if (i == spaces.length - 1) {
+            break;
+        }
+    }
+
+    return oneLineOrder;
+}
+
+// assigns 4 digit pin and locker number 1 to 10
+function assignLockerAndPin() {
+    pin = Math.floor(1000 + Math.random() * 9000);
+    lockerNum = Math.floor(1 + Math.random() * 9);
+}
