@@ -42,33 +42,45 @@
          }
       })
    }
-   
+
    window.removeOrder = removeOrder;
    window.dbHasPin = dbHasPin;
 </script>
 
-<body style="background-color:#40586F;">
+<body>
+    <div class="centerLogo">
+        <img src="./assets/simple-logo.png" alt="food locker logo" width=500px height=auto>
+    </div>
+
+    <div class="container">
+        <img src="./assets/gray-square.png" class="centerSquare" alt="gray square" >
+        <img src="./assets/nfc-tag.png" class="centerNFC" alt="nfc tag">
+        <img src="./assets/long-rectangle.png" class="centerCancel" alt="cancel button" >
+        <div class="scanText">Prepare to Scan</div>
+        <div class="instructionsText">Please hold phone on top of NFC scanner
+            to unlock locker.</div>
+        <div class="cancelText">Cancel</div>
+    </div>
 
 
-   <div>
-      <img src="./assets/enter-pin-popup-bkgrd.png" class="popupContainer" alt="pop up window">
-      <img src="./assets/inner-rectangle-bkgrd.png" class="centerInnerRectangle" alt="inner-rectangle">
-      <div class="pinText">Enter 4-digit pin to unlock locker!</div>
-      <div class="codeText" id='pinEntry'>PIN: </div>
+   <div class="pinEntryContainer">
+        <div class="pinText">Enter 4-digit pin to unlock locker.</div>
+        <div class="codeText" id='pinEntry'></div>
 
-      <input type='button' id="one" onclick="buttonClick(this.value)" value='1'>
-      <input type='button' id="two" onclick="buttonClick(this.value)" value='2'>
-      <input type='button' id="three" onclick="buttonClick(this.value)" value='3'> <br><br>
-      <input type='button' id="four" onclick="buttonClick(this.value)" value='4'>
-      <input type='button' id="five" onclick="buttonClick(this.value)" value='5'>
-      <input type='button' id="six" onclick="buttonClick(this.value)" value='6'> <br><br>
-      <input type='button' id="seven" onclick="buttonClick(this.value)" value='7'>
-      <input type='button' id="eight" onclick="buttonClick(this.value)" value='8'>
-      <input type='button' id="nine" onclick="buttonClick(this.value)" value='9'> <br><br>
-      <input type='button' id="clear" onclick="clearPin()" value='CLEAR'>
-      <input type='button' id="zero" onclick="buttonClick(this.value)" value='0'>
-      <input type='button' id="unlock" onclick="unlockLocker()" value='UNLOCK'>
-
+        <div class="numpad">
+            <input type='button' id="one" onclick="buttonClick(this.value)" value='1'>
+            <input type='button' id="two" onclick="buttonClick(this.value)" value='2'>
+            <input type='button' id="three" onclick="buttonClick(this.value)" value='3'> <br><br>
+            <input type='button' id="four" onclick="buttonClick(this.value)" value='4'>
+            <input type='button' id="five" onclick="buttonClick(this.value)" value='5'>
+            <input type='button' id="six" onclick="buttonClick(this.value)" value='6'> <br><br>
+            <input type='button' id="seven" onclick="buttonClick(this.value)" value='7'>
+            <input type='button' id="eight" onclick="buttonClick(this.value)" value='8'>
+            <input type='button' id="nine" onclick="buttonClick(this.value)" value='9'> <br><br>
+            <input type='button' id="clear" onclick="clearPin()" value='CLEAR'>
+            <input type='button' id="zero" onclick="buttonClick(this.value)" value='0'>
+            <input type='button' id="unlock" onclick="unlockLocker()" value='UNLOCK'>
+        </div>
    </div>
 
 </body>

@@ -21,6 +21,13 @@ html, body {
     padding: 50px;
 }
 
+.centerLogo {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
 #toMenu {
     position: absolute;
     top: 15px;
@@ -313,16 +320,6 @@ cartToggle{
     left: 50%;
     top: 70%;
     transform: translate(-50%, -50%);
-    animation: float-in 0.4s ease-in-out forwards;
-}
-
-@keyframes float-in {
-  0% {
-    transform: translate(-50%, 90%);
-  }
-  100% {
-    transition: translate(-50%, -140%);
-  }
 }
 
 .centerSquare {
@@ -399,44 +396,96 @@ cartToggle{
 }
 
 /* enter pin screen classes*/
-.popupContainer {
-    position: relative;
-    left: 50%;
-    top: 51%;
-    width: 100%;
-    height: 1500px;
-    transform: translate(-50%, -50%);
-}
+.pinEntryContainer {
+    position: absolute;
+    bottom: 0;
 
-.centerInnerRectangle {
-    position: relative;
-    left: 50%;
-    top: 45%;
-    width: 85%;
-    height: 35%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 180vw;
+
+    background: #9FABB7;
+    border-radius: 50px;
+    color: black;
+
+    animation: float-in 1.0s ease-in-out forwards;
+    animation-delay: 5.0s;
+
+    visibility: hidden; //change in visibility mimics the nfc redirecting to enter pin page
+    }
+
+@keyframes float-in {
+  0% {
+    visibility: visible;
+    transform: translate(0, 100%);
+  }
+  100% {
+    visibility: visible;
+    transition: translate(100%, 50%);
+  }
 }
 
 .pinText {
-    position: absolute;
-    top: 38%;
-    left: 50%;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    padding: 100px;
     font-size: 49px;
     font-weight: 600;
     font-family: Montserrat;
     text-align: center;
-    transform: translate(-50%, -50%);
 }
 
 .codeText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 45px;
+    margin: auto;
+    margin-bottom: 150px;
+
+    position: relative;
+    top: 100px;
+
+    width: 380px;
+    height: 50px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+
+    font-size: 52px;
     font-weight: bold;
     font-family: Montserrat;
     text-align: center;
-    transform: translate(-50%, -50%);
+    color: #D35749;
+}
+
+.numpad {
+    position: relative;
+    top: 70px;
+
+    margin: auto;
+    width: 620px;
+}
+
+.numpad input {
+    width:180px;
+    height: 180px;
+
+    border: none;
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%;
+
+    font-size: 48px;
+}
+
+#clear {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#unlock {
+    font-size: 30px;
+    font-weight: bold;
+    color: #D35749;
+
+    border:5px solid #D35749;
 }
 
 /* customer leaving screen classes */
