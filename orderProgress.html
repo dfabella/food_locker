@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="stylesheet.css">
     </head>
 
-    <body onload="completeOrder()">
+    <body class="orderProgress" onload="completeOrder()">
         <input type="image" src="./assets/to-menu.png" id="toMenu" onclick="location.href='menu.html'">
         <img class="topRightLogo" src="./assets/logo.png" alt="food locker logo" onclick="location.href='splashScreen.html'">
 
@@ -83,11 +83,16 @@
                             </p>
                     </div>
                 </div>
+            </div>
 
-                </div>
+            <div class="toEnterPin">
+                <span id="navText">unlock locker</span>
+                <input type="image" src="./assets/to-enterpin.png" onclick="location.href='enterPin.html'">
+            </div>
 
-            <script src="./js/orderProgressScript.js"></script>
-            <script src="cart_script.js"></script>
+        </div>
+        <script src="./js/orderProgressScript.js"></script>
+        <script src="cart_script.js"></script>
 
     </body>
 </html>

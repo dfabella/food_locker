@@ -222,7 +222,8 @@ cartToggle{
 
 .bottomContainer {
     margin-top: 10%;
-    height: 160vw;
+    width: 100%;
+    height: 170vw;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 60px;
 }
@@ -285,7 +286,6 @@ cartToggle{
     font-family: Montserrat;
 }
 
-
 .lockerNumContainer {
     margin: auto;
     align-content: space-between;
@@ -309,6 +309,27 @@ cartToggle{
     font-size: 48px;
     font-weight: 700;
     color: #D35749;
+}
+
+.toEnterPin {
+    margin: 66px;
+    float: right;
+
+    display: flex;
+    align-content: center;
+
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 48px;
+    color: #D35749;
+}
+
+#navText {
+    margin-right: 20px;
+}
+
+.toEnterPin input{
+    width: 80px;
 }
 
 /* end of order progress screen classes */
@@ -408,7 +429,7 @@ cartToggle{
     color: black;
 
     animation: float-in 1.0s ease-in-out forwards;
-    animation-delay: 5.0s;
+    animation-delay: 3.0s;
 
     visibility: hidden; //change in visibility mimics the nfc redirecting to enter pin page
     }
