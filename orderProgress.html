@@ -77,9 +77,9 @@
 
                         <div class="lockerNumContainer">
                             <p>
-                            Locker Number: <span id="lockerPinText">7</span>
+                            Locker Number: <span id="lockerNumberText"></span>
                             <br>
-                            Order Pin: <span id="lockerPinText">1922</span>
+                            Order Pin: <span id="lockerPinText"></span>
                             </p>
                     </div>
                     
@@ -99,6 +99,17 @@
         
         <script src="./js/orderProgressScript.js"></script>
         <script src="cart_script.js"></script>
+        <script>
+            const locker = document.getElementById("lockerNumberText");
+            const pin = document.getElementById("lockerPinText");
+            let orderLocker = localStorage.getItem("orderLocker");
+            let orderPin = localStorage.getItem("orderPin");
 
+            console.log(orderLocker);
+            console.log(orderPin);
+            locker.innerHTML = orderLocker;
+            pin.innerText = orderPin;
+
+        </script>
     </body>
 </html>

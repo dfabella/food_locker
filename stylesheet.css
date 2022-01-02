@@ -411,6 +411,7 @@ cartToggle{
     border-radius: 25px;
     border: none;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .cancelText{

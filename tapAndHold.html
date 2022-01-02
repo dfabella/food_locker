@@ -4,7 +4,7 @@
       <title>Tap and Hold Screen</title>
       <link rel="stylesheet" href="stylesheet.css" />
    </head>
-   <body style="background-color:#40586F;">
+    <body style="background-color:#40586F;">
        <div class="centerLogo">
            <img class="topLogo" src="./assets/simple-logo.png" alt="food locker logo" width=500px height=auto>
        </div>
@@ -17,11 +17,12 @@
                 <div class="scanText">Prepare to Scan</div>
                 <div class="instructionsText">Please hold phone on top of NFC scanner
                     to unlock locker.</div>
-                <button class="cancelButton">
+                <button class="cancelButton" id="cancelScan" onclick="window.location.href='orderProgress.html'">
                     <h1 class="cancelText">Cancel</h1>
                 </button>
             </div>
        </div>
 
-   </body>
+
+    </body>
 </html>

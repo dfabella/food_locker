@@ -32,14 +32,17 @@
 
    function dbHasPin(pinCode) {
       get(ref(database, 'current_orders/' + pinCode)).then((snapshot) => {
-         if (snapshot.exists()) {
+        let generatedPin = localStorage.getItem("orderPin");
+        if (snapshot.exists() && (pinCode.localeCompare(generatedPin)) == 0) {
+            console.log("PINS MATCH: ", generatedPin, " = ", pinCode);
             // MOVES ONTO OPENING LOCKER FUNCTIONS
             removeOrder(pinCode);
             clearPin();
-         } else {
+            window.location.href = "lockerUnlocked.html";
+        } else {
             alert("Invalid PIN Code! Please try again.");
             clearPin();
-         }
+        }
       })
    }
 
@@ -58,7 +61,7 @@
             <div class="scanText">Prepare to Scan</div>
             <div class="instructionsText">Please hold phone on top of NFC scanner
                 to unlock locker.</div>
-                <button class="cancelButton">
+                <button class="cancelButton" onclick="window.location.href='orderProgress.html'">
                     <h1 class="cancelText">Cancel</h1>
                 </button>
         </div>
