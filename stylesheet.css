@@ -314,42 +314,32 @@ cartToggle{
     color: #D35749;
 }
 
-.toEnterPin {
-    margin: 66px;
-    float: right;
-
+.toUnlock{
     display: flex;
-    align-content: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    margin: auto;
+    margin-top: 80px;
 
-    font-family: Montserrat;
-    font-weight: 600;
+    width: 70%;
+    height: 90px;
+
+    background-color: #D35749;
+    border: 5px solid #D35749;
+    border-radius: 50px;
+
+    color: white;
     font-size: 48px;
-    color: #D35749;
 }
 
-#navText {
-    margin-right: 20px;
-}
-
-.toEnterPin input{
-    width: 80px;
+.toEnterPin {
+    position: relative;
+    width: 60px;
+    bottom: 10px;
 }
 
 /* end of order progress screen classes */
 
-.toUnlock{
-
-    position: absolute;
-
-    margin: auto;
-    width: 400px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transform: translate(50%, -50%);
-}
 
 /* tap and hold + locker unlocked screen classes */
 .container {
@@ -456,22 +446,6 @@ cartToggle{
     border-radius: 100px;
 }
 
-/* #leavingBox{
-    position: relative;
-    height: 600px;
-    width: 600px;
-    bottom: 50px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    border-radius: 100px;
-} */
-
-
-.container #unlockedContainer{
-    z-index: -1;
-}
-
 .toLock{
     top: 200px;
     position: relative;
@@ -481,23 +455,6 @@ cartToggle{
     border: none;
     border-radius: 30px;
     cursor: pointer;
-}
-
-.toLockText{
-    position: relative;
-    bottom: 8px;
-    /* right: 50px; */
-    font-size: 30px;
-    font-weight: 200;
-
-}
-
-.toLockArrow{
-    position: relative;
-    height: 30px;
-    width: auto;
-    bottom: 60px;
-    left: 163px;
 }
 
 /* enter pin screen classes*/
