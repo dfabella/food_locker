@@ -429,7 +429,7 @@ cartToggle{
     color: black;
 
     animation: float-in 1.0s ease-in-out forwards;
-    animation-delay: 3.0s;
+    animation-delay: 0.8s;
 
     visibility: hidden; //change in visibility mimics the nfc redirecting to enter pin page
     }
