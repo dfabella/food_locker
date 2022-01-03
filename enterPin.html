@@ -35,7 +35,6 @@
         let generatedPin = localStorage.getItem("orderPin");
         if (snapshot.exists() && (pinCode.localeCompare(generatedPin)) == 0) {
             console.log("PINS MATCH: ", generatedPin, " = ", pinCode);
-            // MOVES ONTO OPENING LOCKER FUNCTIONS
             removeOrder(pinCode);
             clearPin();
             window.location.href = "lockerUnlocked.html";
