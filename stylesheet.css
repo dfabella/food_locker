@@ -25,8 +25,9 @@ html, body {
     position: absolute;
     left: 50%;
     top: 30%;
+
+    width: 400px;
     transform: translate(-50%, -50%);
-    /* z-index: 1; */
 }
 
 #toMenu {
@@ -337,9 +338,9 @@ cartToggle{
 /* end of order progress screen classes */
 
 .toUnlock{
-    
+
     position: absolute;
-    
+
     margin: auto;
     width: 400px;
     height: 60px;
@@ -466,13 +467,6 @@ cartToggle{
     border-radius: 100px;
 } */
 
-
-.topLogo{
-    position: relative;
-    height: 200px;
-    width: auto;
-    top: -125px;
-}
 
 .container #unlockedContainer{
     z-index: -1;
