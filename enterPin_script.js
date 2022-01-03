@@ -18,4 +18,5 @@ function unlockLocker() {
     } else {
        dbHasPin(finalPin);
     }
- }
+}
+

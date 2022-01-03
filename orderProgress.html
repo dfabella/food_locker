@@ -20,7 +20,7 @@
                 <img src="./assets/order-processing.png" id="processing" alt="">
                 <img src="./assets/order-preparing.png" id="preparing" alt="">
                 <img src="./assets/order-ready.png" id="ready" alt="">
-                </div>
+            </div>
 
             <div class="orderContainer">
                 <table id="orderDetails">
@@ -77,22 +77,39 @@
 
                         <div class="lockerNumContainer">
                             <p>
-                            Locker Number: <span id="lockerPinText">7</span>
+                            Locker Number: <span id="lockerNumberText"></span>
                             <br>
-                            Order Pin: <span id="lockerPinText">1922</span>
+                            Order Pin: <span id="lockerPinText"></span>
                             </p>
                     </div>
-                </div>
-            </div>
 
-            <div class="toEnterPin">
-                <span id="navText">unlock locker</span>
-                <input type="image" src="./assets/to-enterpin.png" onclick="location.href='tapAndHold.html'">
+                </div>
+
             </div>
+            
+            <button class="toUnlock" onclick="window.location.href='enterPin.html'">
+                <h1 class="toLockText">Unlock Locker</h1>
+                <img src="./assets/to-enterpin.png" class="toLockArrow" alt="to pin arrow">
+            </button>
+            <!-- <div class="toEnterPin"> -->
+
+            <!-- </div> -->
 
         </div>
+
         <script src="./js/orderProgressScript.js"></script>
         <script src="cart_script.js"></script>
+        <script>
+            const locker = document.getElementById("lockerNumberText");
+            const pin = document.getElementById("lockerPinText");
+            let orderLocker = localStorage.getItem("orderLocker");
+            let orderPin = localStorage.getItem("orderPin");
 
+            console.log(orderLocker);
+            console.log(orderPin);
+            locker.innerHTML = orderLocker;
+            pin.innerText = orderPin;
+
+        </script>
     </body>
 </html>

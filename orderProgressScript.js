@@ -1,6 +1,7 @@
 let timeout;
 var i = 0;
 
+
 function completeOrder() {
     timeout = setTimeout(load, 1500);
 }
@@ -32,8 +33,9 @@ function load() {
         }
 }
 
+
 // FIXME: the addEventListener isn't working
-const toUnlock = document.getElementById('navText';
+const toUnlock = document.getElementById('toUnlock');
 toUnlock.addEventListener("click", toUnlock());
 
 function toUnlock() {

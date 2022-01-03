@@ -26,6 +26,7 @@ html, body {
     left: 50%;
     top: 30%;
     transform: translate(-50%, -50%);
+    /* z-index: 1; */
 }
 
 #toMenu {
@@ -169,6 +170,7 @@ cartToggle{
 
     font-size: 50px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 #price{
@@ -235,12 +237,12 @@ cartToggle{
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 80%;
+    width: 750px;
     height: auto;
     padding: 30px;
 
     background: rgba(255, 255, 255, 0.6);
-    border-radius: 20px;
+    border-radius: 30px;
 
     font-family: Montserrat;
     color: black;
@@ -334,6 +336,19 @@ cartToggle{
 
 /* end of order progress screen classes */
 
+.toUnlock{
+    
+    position: absolute;
+    
+    margin: auto;
+    width: 400px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transform: translate(50%, -50%);
+}
 
 /* tap and hold + locker unlocked screen classes */
 .container {
@@ -349,11 +364,11 @@ cartToggle{
 }
 
 .centerNFC {
-    position: absolute;
-    left: 30%;
-    top: 26%;
-    width: 250px;
-    height: 250px;
+    position: relative;
+    margin: auto;
+    top: 160px;
+    height: 200px;
+    width: auto;
 }
 
 .scanText {
@@ -386,34 +401,109 @@ cartToggle{
     transform: translate(-50%, -50%);
 }
 
-.cancelText {
+.cancelButton {
     position: absolute;
-    top: 85%;
+    top: 87%;
     left: 50%;
-    font-size: 35px;
+    width: 300px;
+    height: 75px;
+    background-color: rgb(160, 160, 160, 1);
+    border-radius: 25px;
+    border: none;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.cancelText{
+    position: relative;
+    bottom: 8px;
     font-family: Montserrat;
     color: white;
-    transform: translate(-50%, -50%);
+    /* right: 50px; */
+    font-size: 35px;
+    font-weight: 400;
+
 }
 
 .unlockText {
-    position: absolute;
-    top: 25%;
-    left: 50%;
+    position: relative;
+    top: 10%;
+    width: 80%;
+    margin: auto;
     font-size: 35px;
     font-weight: 600;
     font-family: Montserrat;
     text-align: center;
-    transform: translate(-50%, -50%);
 }
 
 .centerLocker {
-    position: absolute;
-    left: 50%;
-    top: 60%;
+    position: relative;
+    right: 10px;
+    top: 17%;
     width: 400px;
     color:gray;
-    transform: translate(-50%, -50%);
+}
+
+.box2{
+    position: relative;
+    height: 600px;
+    width: 600px;
+    bottom: 50px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    border-radius: 100px;
+}
+
+/* #leavingBox{
+    position: relative;
+    height: 600px;
+    width: 600px;
+    bottom: 50px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    border-radius: 100px;
+} */
+
+
+.topLogo{
+    position: relative;
+    height: 200px;
+    width: auto;
+    top: -125px;
+}
+
+.container #unlockedContainer{
+    z-index: -1;
+}
+
+.toLock{
+    top: 200px;
+    position: relative;
+    width: 400px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.toLockText{
+    position: relative;
+    bottom: 8px;
+    /* right: 50px; */
+    font-size: 30px;
+    font-weight: 200;
+
+}
+
+.toLockArrow{
+    position: relative;
+    height: 30px;
+    width: auto;
+    bottom: 60px;
+    left: 163px;
 }
 
 /* enter pin screen classes*/
@@ -431,7 +521,7 @@ cartToggle{
     animation: float-in 1.0s ease-in-out forwards;
     animation-delay: 0.8s;
 
-    visibility: hidden; //change in visibility mimics the nfc redirecting to enter pin page
+    visibility: hidden; /*change in visibility mimics the nfc redirecting to enter pin page*/
     }
 
 @keyframes float-in {
@@ -511,17 +601,18 @@ cartToggle{
 
 /* customer leaving screen classes */
 .centerLock {
-    position: absolute;
-    left: 35%;
-    top: 28%;
+    position: relative;
+    margin: auto;
+    top: 25%;
     width: 200px;
     height: 200px;
 }
 
 .relockText {
-    position: absolute;
-    top: 75%;
+    position: relative;
+    top: 40%;
     left: 50%;
+    width: 300px;
     font-size: 30px;
     font-family: Montserrat;
     text-align: center;
