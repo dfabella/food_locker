@@ -43,7 +43,7 @@ window.onclick = function(event) {
   if (event.target == modal6) {
     modal6.style.display = "none";
   }
-  
+
 }
 
 /*--------increment and decrement cart count--------*/
@@ -111,7 +111,7 @@ const plus2 = document.getElementById('plus2'),
  priceVal2 = document.getElementById('priceVal2'),
  name2 = document.getElementById('name2').innerText,
  cart2 = document.getElementById('cart2');
- 
+
 let price2 = Number(priceVal2.innerText);
 
 let b = 1;
@@ -144,7 +144,7 @@ minus2.addEventListener("click", ()=>{
         priceVal2.innerText = newPrice2.toFixed(2);
     }
     count2.innerText = b;
-    
+
     console.log(b);
     console.log(newPrice2);
 });
@@ -155,7 +155,7 @@ cart2.addEventListener("click", ()=>{
     localStorage.setItem("name2", name2);
     localStorage.setItem("b", b);
     localStorage.setItem("newPrice2", newPrice2);
-    
+
 });
 
 /*--------ITEM 3--------*/
@@ -165,7 +165,7 @@ const plus3 = document.getElementById('plus3'),
  priceVal3 = document.getElementById('priceVal3'),
  name3 = document.getElementById('name3').innerText,
  cart3 = document.getElementById('cart3');
- 
+
  let price3 = Number(document.getElementById('priceVal3').innerText);
 
 let c = 1;
@@ -217,7 +217,7 @@ const plus4 = document.getElementById('plus4'),
  priceVal4 = document.getElementById('priceVal4'),
  name4 = document.getElementById('name4').innerText,
  cart4 = document.getElementById('cart4');
- 
+
  let price4 = Number(document.getElementById('priceVal4').innerText);
 
 let d = 1;
@@ -259,7 +259,7 @@ cart4.addEventListener("click", ()=>{
     //localStorage.setItem("item2Click", item2Click);
     localStorage.setItem("name4", name4);
     localStorage.setItem("d", d);
-    localStorage.setItem("newPrice4", newPrice4); 
+    localStorage.setItem("newPrice4", newPrice4);
 });
 
 /*--------ITEM 5--------*/
@@ -269,7 +269,7 @@ const plus5 = document.getElementById('plus5'),
  priceVal5 = document.getElementById('priceVal5'),
  name5 = document.getElementById('name5').innerText,
  cart5 = document.getElementById('cart5');
- 
+
  let price5 = Number(document.getElementById('priceVal5').innerText);
 
 let e = 1;
@@ -285,7 +285,7 @@ plus5.addEventListener("click", ()=>{
 
     count5.innerText = e;
 
-    let newPrice5 = e * price5;
+    newPrice5 = e * price5;
 
     priceVal5.innerText = "";
     priceVal5.innerText = newPrice5.toFixed(2);
@@ -311,7 +311,7 @@ cart5.addEventListener("click", ()=>{
     //localStorage.setItem("item2Click", item2Click);
     localStorage.setItem("name5", name5);
     localStorage.setItem("e", e);
-    localStorage.setItem("newPrice5", newPrice5); 
+    localStorage.setItem("newPrice5", newPrice5);
 });
 
 /*--------ITEM 6--------*/
@@ -321,7 +321,7 @@ const plus6 = document.getElementById('plus6'),
  priceVal6 = document.getElementById('priceVal6'),
  name6 = document.getElementById('name6').innerText,
  cart6 = document.getElementById('cart6');
- 
+
  let price6 = Number(document.getElementById('priceVal6').innerText);
 
 let f = 1;
@@ -337,7 +337,7 @@ plus6.addEventListener("click", ()=>{
 
     count6.innerText = f;
 
-    let newPrice6 = f * price6;
+    newPrice6 = f * price6;
 
     priceVal6.innerText = "";
     priceVal6.innerText = newPrice6.toFixed(2);
@@ -363,7 +363,5 @@ cart6.addEventListener("click", ()=>{
     //localStorage.setItem("item2Click", item2Click);
     localStorage.setItem("name6", name6);
     localStorage.setItem("f", f);
-    localStorage.setItem("newPrice6", newPrice6); 
+    localStorage.setItem("newPrice6", newPrice6);
 });
-
-

@@ -32,12 +32,3 @@ function load() {
             }
         }
 }
-
-
-// FIXME: the addEventListener isn't working
-const toUnlock = document.getElementById('toUnlock');
-toUnlock.addEventListener("click", toUnlock());
-
-function toUnlock() {
-    window.location.href = 'enterPin.html';
-}
