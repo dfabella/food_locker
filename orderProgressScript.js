@@ -21,6 +21,7 @@ function load() {
                 clearInterval(id);
 
             } else if (elem.style.width == "46%"){
+                alert(elem.style.width);
                 document.getElementById('preparing').src="./assets/order-preparing1.png";
                 progressText.textContent = "Order Preparing...";
                 width += 0.5;
