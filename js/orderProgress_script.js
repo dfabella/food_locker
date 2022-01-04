@@ -21,7 +21,7 @@ function load() {
             elem.style.width = newWidth + "%";
             progress = elem.style.width;
 
-        } else if (progress == ready) {
+        } else if (progress >= ready) {
             document.getElementById('ready').src="./assets/order-ready1.png";
             clearInterval(id);
 
