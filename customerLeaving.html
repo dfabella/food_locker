@@ -6,7 +6,8 @@
         <style>
             .button {
                display: inline-flex;
-               height: 50px;
+               height: 80px;
+               width: 250px;
                padding: 0;
                background: #ffffff;
                border: none;
@@ -18,7 +19,6 @@
                font-weight: 600;
                cursor: pointer;
             }
-   
    
             .button:active {
                background: #979797;
@@ -35,7 +35,7 @@
             .lockButtonCenter {
                margin: 0;
                position: absolute;
-               top: 90%;
+               top: 75%;
                left: 50%;
                -ms-transform: translate(-50%, -50%);
                transform: translate(-50%, -50%);
@@ -75,20 +75,21 @@
             <img class="topLogo" src="./assets/simple-logo.png" alt="food locker logo" width=500px height=auto>
         </div>
         <div class="container" id="leavingContainer">
-            <div class="box2" id="leavingBox">
+            <!-- <div class="box2" id="leavingBox"> -->
                 <!-- <img src="./assets/gray-square.png" class="centerSquare" alt="gray square" > -->
-                <img src="./assets/lock.png" class="centerLock" alt="lock">
+                <!-- <img src="./assets/lock.png" class="centerLock" alt="lock">
                 <div class="scanText">Ready To Lock</div>
                 <div class="relockText">Close locker and tap to lock</div>
-                <div class="lockButtonContainer">
-                    <div class="lockButtonCenter">
-                      <button onclick="dbLockLocker()" type="button" class="button">
-                         <span class="button__text">Lock Locker</span>
-                       </button>
-                      </div>
-                 </div>
+                <div class="lockButtonContainer"> -->
+            <img class="bottomLogo" src="./assets/lockLocker.png">
+                <div class="lockButtonCenter">
+                    <button onclick="dbLockLocker()" type="button" class="button">
+                        <span class="button__text">Lock Locker</span>
+                    </button>
+                    </div>
+                 <!-- </div> -->
             </div>
         </div>
-        
+
    </body>
 </html>
