@@ -23,11 +23,11 @@ function load() {
             } else if (elem.style.width == "46%"){
                 document.getElementById('preparing').src="./assets/order-preparing1.png";
                 progressText.textContent = "Order Preparing...";
-                width += 0.2;
+                width += 0.5;
                 elem.style.width = width + "%";
 
             } else {
-            width += 0.2;
+            width += 0.5;
             elem.style.width = width + "%";
             }
         }
