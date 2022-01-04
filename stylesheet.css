@@ -350,11 +350,16 @@ cartToggle {
 /* end of order progress screen classes */
 
 /* tap and hold + locker unlocked screen classes */
-.container {
-  position: absolute;
-  left: 50%;
-  top: 70%;
-  transform: translate(-50%, -50%);
+.unlockedContainer {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+}
+
+#unlockedSq {
+    width: 100%;
 }
 
 .bottomLogo {
@@ -451,19 +456,7 @@ cartToggle {
   color: gray;
 }
 
-.box2 {
-  position: relative;
-  height: 850px;
-  width: 750px;
-  bottom: 50px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  border-radius: 100px;
-}
-
 .toLock {
-  top: 200px;
   position: relative;
   width: 400px;
   height: 60px;
