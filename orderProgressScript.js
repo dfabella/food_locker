@@ -15,7 +15,7 @@ function load() {
         var id = setInterval(frame, 10);
     }
         function frame() {
-            if (width >= 96) {
+            if (width >= 90) {
                 document.getElementById('ready').src="./assets/order-ready1.png";
                 progressText.textContent = "Order Ready For Pick-Up!"
                 clearInterval(id);
