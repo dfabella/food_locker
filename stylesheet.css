@@ -35,7 +35,7 @@ body {
 .centerLogo {
   position: absolute;
   left: 50%;
-  top: 25%;
+  top: 30%;
   width: 550px;
   transform: translate(-50%, -50%);
 }
@@ -496,7 +496,7 @@ cartToggle {
   }
   100% {
     visibility: visible;
-    transition: translate(100%, 50%);
+    transform: translate(0, 4%);
   }
 }
 
