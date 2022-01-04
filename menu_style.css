@@ -386,7 +386,7 @@
 @media (max-width: 480px) {
 
     .items .box-container{
-        
+
         grid-gap: 10%;
         padding-right: 2.5rem;
         padding-left: 2.5rem;
@@ -405,12 +405,12 @@
         width: auto;
         transform: translate(0, -100%);
     }
-    
+
     .items .box-container .box .price{
-        top:87%; 
+        top:87%;
         color:var(--white);
         font-size: 1.2rem;
-    } 
+    }
 
     /* .items h2{
         position: relative;
@@ -427,18 +427,18 @@
         font-size: 15px;
         bottom: 2.5rem;
     }
-    
+
     .items #head-row2-col1{
         font-size: 15px;
         bottom: 2rem;
     }
-    
+
     .items #head-row2-col2{
         font-size: 15px;
         padding: 10px;
         bottom: 1rem;
     }
-    
+
     .items #head-row3-col1{
         font-size: 15px;
         bottom: 0rem;
@@ -459,15 +459,15 @@
     .items #row2-col1{
         top: -15px;
     }
-    
+
     .items #row2-col2{
         top: -10px;
     }
-    
+
     .items #row3-col1{
         top: 5px;
     }
-    
+
     .items #row3-col2{
         top: 0px;
     }
@@ -480,7 +480,7 @@
     }
 
     .items .box-container{
-        
+
         grid-gap: 10%;
         padding-right: 2.5rem;
         padding-left: 2.5rem;
@@ -489,7 +489,7 @@
     .items .box-container .box .price{
         font-size: .8rem;
         right: .6rem;
-    } 
+    }
     /* .items h2{
         font-size: 14px;
         top: -20px;
@@ -505,19 +505,19 @@
         font-size: 13px;
         top: -20px;
     }
-    
+
     .items #head-row2-col1{
         top: -15px;
         padding: 10px;
         font-size: 13px;
     }
-    
+
     .items #head-row2-col2{
         padding: 10px;
         font-size: 13px;
         top: -5px;
     }
-    
+
     .items #head-row3-col1{
         font-size: 13px;
         top: 0px;
@@ -540,21 +540,20 @@
         font-size: 10px;
         top: -15px;
     }
-    
+
     .items #row2-col2{
         font-size: 10px;
         top: -10px;
     }
-    
+
     .items #row3-col1{
         font-size: 10px;
         top: 5px;
     }
-    
+
     .items #row3-col2{
         font-size: 10px;
         top: 0px;
     }
 
 }
-
