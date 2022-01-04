@@ -11,12 +11,22 @@ html, body {
     background-color: #40586F;
 }
 
+.topLeftLogo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 220px;
+    height: auto;
+    padding: 40px;
+}
+
 .topRightLogo {
     position: absolute;
     top: 0px;
     right: 0px;
 
-    width: 200px;
+    width: 240px;
     height: auto;
     padding: 50px;
 }
@@ -75,10 +85,10 @@ cartToggle{
 
 /* main contents of cart */
 .screenTitle {
-    margin-top: 35%;
+    margin-top: 32%;
     font-family: Montserrat;
     font-weight: bold;
-    font-size: 72px;
+    font-size: 85px;
     line-height: 49px;
     color: white;
     text-align: center;
@@ -88,13 +98,13 @@ cartToggle{
 .cartPage{
     position: relative;
     margin: auto;
-    margin-top: 5%;
-    margin-bottom: 30%;
-    width: 90vw;
-    height: 90vw;
+    margin-top: 8%;
+    margin-bottom: 20%;
+    width: 85vw;
+    height: 130vw;
 
     background: #FFFFFFB3;
-    border-radius: 20px;
+    border-radius: 45px;
 
     font-family: Montserrat;
     color: black;
@@ -113,7 +123,7 @@ cartToggle{
 
 .cartPage table thead td{
     border: none;
-    padding: 20px;
+    padding: 30px;
     font-size: 36px;
     color: #273F56;
 }
@@ -160,7 +170,7 @@ cartToggle{
 .coBtnWrap{
     display: flex;
     justify-content: space-between;
-    padding: 20px 25px;
+    padding: 20px 60px;
 
     background-color: #D35749;
     border: 5px solid #D35749;
