@@ -485,18 +485,16 @@ cartToggle {
 
   animation: float-in 1s ease-in-out forwards;
   animation-delay: 0.8s;
-
-  visibility: hidden; /*change in visibility mimics the nfc redirecting to enter pin page*/
 }
 
 @keyframes float-in {
   0% {
-    visibility: visible;
-    transform: translate(0, 100%);
+    transform: translate(0, 0);
+
   }
   100% {
-    visibility: visible;
-    transform: translate(0, 4%);
+    transform: translate(0, 90%);
+
   }
 }
 
