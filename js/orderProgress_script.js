@@ -8,7 +8,7 @@ let newWidth = 1;
 let progress;
 
 function load() {
-    var id = setInterval(fillProgress, 10);
+    var id = setInterval(fillProgress, 500);
     function fillProgress() {
         const confirmed = "46%";
         const ready = "96%";
