@@ -17,7 +17,7 @@ function load() {
         //increase length of progress bar until full
         if (progress == confirmed) {
             document.getElementById('preparing').src="./assets/order-preparing1.png";
-            newWidth += 0.3;
+            newWidth += 0.5;
             elem.style.width = newWidth + "%";
             progress = elem.style.width;
 
@@ -26,7 +26,7 @@ function load() {
             clearInterval(id);
 
         }   else {
-            newWidth += 0.3;
+            newWidth += 0.5;
             elem.style.width = newWidth + "%";
             progress = elem.style.width;
         }
