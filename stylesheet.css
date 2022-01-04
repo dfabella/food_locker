@@ -568,6 +568,13 @@ cartToggle {
   height: 200px;
 }
 
+.container {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
 .relockText {
   position: relative;
   top: 40%;
