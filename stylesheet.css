@@ -457,13 +457,18 @@ cartToggle {
 }
 
 .toLock {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+
   width: 400px;
   height: 60px;
+
   background: rgba(255, 255, 255, 0.5);
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 
 /* enter pin screen classes*/
