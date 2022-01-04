@@ -10,14 +10,14 @@ let progress;
 function load() {
     var id = setInterval(fillProgress, 10);
     function fillProgress() {
-        const confirmed = "46%";
-        const ready = "96%";
+        const confirmed = "40%";
+        const ready = "90%";
         console.log(progress);
 
         //increase length of progress bar until full
         if (progress == confirmed) {
             document.getElementById('preparing').src="./assets/order-preparing1.png";
-            newWidth += 0.5;
+            newWidth += 0.3;
             elem.style.width = newWidth + "%";
             progress = elem.style.width;
 
@@ -26,7 +26,7 @@ function load() {
             clearInterval(id);
 
         }   else {
-            newWidth += 0.5;
+            newWidth += 0.3;
             elem.style.width = newWidth + "%";
             progress = elem.style.width;
         }
