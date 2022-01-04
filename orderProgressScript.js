@@ -21,7 +21,7 @@ function load() {
                 clearInterval(id);
 
             } else if (width == 46){
-                document.getElementById('preparing').src="./assets/order-ready1.png";
+                document.getElementById('poopoo').src="./assets/order-preparing1.png";
                 progressText.textContent = "Order Preparing...";
                 width += 0.2;
                 elem.style.width = width + "%";
