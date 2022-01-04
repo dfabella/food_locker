@@ -10,8 +10,8 @@ let progress;
 function load() {
     var id = setInterval(fillProgress, 10);
     function fillProgress() {
-        const confirmed = "50%";
-        const ready = "100%";
+        const confirmed = "46%";
+        const ready = "96%";
         console.log(progress);
 
         //increase length of progress bar until full
