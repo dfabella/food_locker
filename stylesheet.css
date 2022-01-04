@@ -357,6 +357,12 @@ cartToggle {
   transform: translate(-50%, -50%);
 }
 
+.bottomLogo {
+    width: 750px;
+    height: 850px;
+    margin-bottom: 10%;
+}
+
 .centerSquare {
   width: 650px;
   height: 700px;
