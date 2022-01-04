@@ -126,12 +126,13 @@
     justify-items: center;
     align-content: space-evenly;
     align-items: center;
+    margin-bottom: 70%;
 }
 
 .items .box-container .box {
     position: relative;
-    height: 224.36px;
-    width: 185.87px;
+    /* height: 224.36px;
+    width: 185.87px; */
     top: 120%;
     background: rgba(255, 255, 255, 0.5);
     text-align: center;
