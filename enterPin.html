@@ -38,6 +38,7 @@
             removeOrder(pinCode);
             clearPin();
             window.location.href = "lockerUnlocked.html";
+            dbUnlockLocker();
         } else {
             alert("Invalid PIN Code! Please try again.");
             clearPin();
@@ -45,8 +46,15 @@
       })
    }
 
+   function dbUnlockLocker() {
+      set(ref(database, 'arduino/'), {
+         is_locker_open: 1
+      });
+   }
+
    window.removeOrder = removeOrder;
    window.dbHasPin = dbHasPin;
+   window.dbUnlockLocker = dbUnlockLocker;
 </script>
 
 <body>

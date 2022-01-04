@@ -3,9 +3,72 @@
     <head>
         <title>Customer Leaving Screen</title>
         <link rel="stylesheet" href="stylesheet.css" />
+        <style>
+            .button {
+               display: inline-flex;
+               height: 50px;
+               padding: 0;
+               background: #ffffff;
+               border: none;
+               outline: none;
+               border-radius: 10px;
+               overflow: hidden;
+               font-family: 'Montserrat';
+               font-size: 30px;
+               font-weight: 600;
+               cursor: pointer;
+            }
+   
+   
+            .button:active {
+               background: #979797;
+            }
+   
+            .button__text {
+               display: inline-flex;
+               align-items: center;
+               padding: 0 24px;
+               color: #000000;
+               height: 100%;
+            }
+   
+            .lockButtonCenter {
+               margin: 0;
+               position: absolute;
+               top: 90%;
+               left: 50%;
+               -ms-transform: translate(-50%, -50%);
+               transform: translate(-50%, -50%);
+            }
+   
+         </style>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
     </head>
-
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        import { getDatabase, ref, set, remove, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+     
+        const firebaseConfig = {
+           apiKey: "AIzaSyC7oLVnl-tJNTiKmYz2dl6q-htaAnD3qyY",
+           authDomain: "alpha-beta-food-locker.firebaseapp.com",
+           databaseURL: "https://alpha-beta-food-locker-default-rtdb.firebaseio.com",
+           projectId: "alpha-beta-food-locker",
+           storageBucket: "alpha-beta-food-locker.appspot.com",
+           messagingSenderId: "557847595",
+           appId: "1:557847595:web:6584f577fcd5a9ed01866e",
+           measurementId: "G-KC6KFEXSNN"
+        };
+     
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+     
+        function dbLockLocker() {
+           set(ref(database, 'arduino/'), {
+              is_locker_open: 0
+           });
+        }
+        window.dbLockLocker = dbLockLocker;
+     </script>
     <body style="background-color:#40586F;">
 
         <div class="centerLogo">
@@ -16,8 +79,14 @@
                 <!-- <img src="./assets/gray-square.png" class="centerSquare" alt="gray square" > -->
                 <img src="./assets/lock.png" class="centerLock" alt="lock">
                 <div class="scanText">Ready To Lock</div>
-                <div class="relockText">Please hold phone back on top of NFC scanner
-                    to lock locker.</div>
+                <div class="relockText">Close locker and tap to lock</div>
+                <div class="lockButtonContainer">
+                    <div class="lockButtonCenter">
+                      <button onclick="dbLockLocker()" type="button" class="button">
+                         <span class="button__text">Lock Locker</span>
+                       </button>
+                      </div>
+                 </div>
             </div>
         </div>
    </body>
