@@ -148,12 +148,8 @@ cartToggle{
 /* adjust quantity */
 .cartPage table tbody input {
     margin: 0 5px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    outline: none;
-    border: none;
-    background: #273F5680;
+    width: 10px;
+    height: auto;
 
     font-size: 30px;
     color: #151D25;
