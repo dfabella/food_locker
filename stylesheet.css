@@ -35,7 +35,7 @@ body {
 .centerLogo {
   position: absolute;
   left: 50%;
-  top: 30%;
+  top: 25%;
   width: 550px;
   transform: translate(-50%, -50%);
 }
@@ -571,6 +571,13 @@ cartToggle {
   top: 25%;
   width: 200px;
   height: 200px;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
 }
 
 .relockText {
