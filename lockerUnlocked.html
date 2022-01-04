@@ -4,7 +4,46 @@
       <title>Locker Unlocked Screen</title>
       <link rel="stylesheet" href="stylesheet.css" />
       <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800" rel="stylesheet">
-   </head>
+      <style>
+        .button {
+           display: inline-flex;
+           height: 50px;
+           padding: 0;
+           background: #ffffff;
+           border: none;
+           outline: none;
+           border-radius: 10px;
+           overflow: hidden;
+           font-family: 'Montserrat';
+           font-size: 30px;
+           font-weight: 600;
+           cursor: pointer;
+        }
+
+
+        .button:active {
+           background: #979797;
+        }
+
+        .button__text {
+           display: inline-flex;
+           align-items: center;
+           padding: 0 24px;
+           color: #000000;
+           height: 100%;
+        }
+
+        .lockButtonCenter {
+           margin: 0;
+           position: absolute;
+           top: 90%;
+           left: 50%;
+           -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+        }
+
+        </style>
+    </head>
    <body style="background-color:#40586F;">
 
     <div class="centerLogo">
@@ -12,7 +51,14 @@
     </div>
 
     <div class="container" id="unlockedContainer">
-        <img class="bottomLogo" src="./assets/unlockedLocker.png">
+        <div class="box2" id="unlockedBox">
+            <div class="unlockText">Locker unlocked! Please remove food.</div>
+            <img src="./assets/locker.png" class="centerLocker" alt="locker img" >
+            <button class="toLock" onclick="window.location.href='customerLeaving.html'">
+                <h1 class="toLockText">Proceed to Lock</h1>
+            </button>
+        </div>
+
     </div>
 
    </body>
