@@ -3,8 +3,7 @@ var i = 0;
 
 
 function completeOrder() {
-    // timeout = setTimeout(load, 1500);
-    alert("hello");
+    timeout = setTimeout(load, 1500);
 }
 
 function load() {
