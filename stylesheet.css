@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 /* :root{
     --white: #FFFFFF;
@@ -6,486 +6,490 @@
     --FLblue: #40586F;
 } */
 
-html, body {
-    min-height: 100%;
-    background-color: #40586F;
+html,
+body {
+  min-height: 100%;
+  background-color: #40586f;
 }
 
 .topLeftLogo {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 
-    width: 220px;
-    height: auto;
-    padding: 40px;
+  width: 220px;
+  height: auto;
+  padding: 40px;
 }
 
 .topRightLogo {
-    position: absolute;
-    top: 0px;
-    right: 0px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 
-    width: 240px;
-    height: auto;
-    padding: 50px;
+  width: 240px;
+  height: auto;
+  padding: 50px;
 }
 
 .centerLogo {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-
-    width: 400px;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 550px;
+  transform: translate(-50%, -50%);
 }
 
 #toMenu {
-    position: absolute;
-    top: 15px;
-    left: 30px;
+  position: absolute;
+  top: 15px;
+  left: 30px;
 
-    width: 100px;
-    background: none;
-    border: none;
+  width: 100px;
+  background: none;
+  border: none;
 }
 
 /* splash screen classes */
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    width: 50%;
-    height: auto;
-    transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
+  transform: translate(-50%, -50%);
 }
 
 .splash {
-    width: 100%;
-    height: 100%;
-    background: black;
+  width: 100%;
+  height: 100%;
+  background: black;
 }
 
 #welcome {
-    opacity: 1;
-    transition: opacity 0.8s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
 }
 
 #welcome.fade {
-    opacity: 0;
+  opacity: 0;
 }
 /* end of splash screen classes */
 
-
 /* cart screen classes */
-cartToggle{
-    display: none;
+cartToggle {
+  display: none;
 }
 
 /* main contents of cart */
 .screenTitle {
-    margin-top: 32%;
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 85px;
-    line-height: 49px;
-    color: white;
-    text-align: center;
+  margin-top: 32%;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 85px;
+  line-height: 49px;
+  color: white;
+  text-align: center;
 }
 
 /* cart contents */
-.cartPage{
-    position: relative;
-    margin: auto;
-    margin-top: 8%;
-    margin-bottom: 20%;
-    width: 95%;
-    height: 130vw;
+.cartPage {
+  position: relative;
+  margin: auto;
+  margin-top: 8%;
+  margin-bottom: 20%;
+  width: 95%;
+  height: 130vw;
 
-    background: #FFFFFFB3;
-    border-radius: 45px;
+  background: #ffffffb3;
+  border-radius: 45px;
 
-    font-family: Montserrat;
-    color: black;
+  font-family: Montserrat;
+  color: black;
 }
 
-.cartPage table{
-    text-align: center;
-    padding: 20px 20px;
-    width: 100%;
-    border-collapse: collapse;
+.cartPage table {
+  text-align: center;
+  padding: 20px 20px;
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.cartPage tr{
-    height: 12vw;
+.cartPage tr {
+  height: 12vw;
 }
 
-.cartPage table thead td{
-    border: none;
-    padding: 30px;
-    font-size: 36px;
-    color: #273F56;
+.cartPage table thead td {
+  border: none;
+  padding: 30px;
+  font-size: 36px;
+  color: #273f56;
 }
 
-.cartPage table tbody td{
-    font-size: 38px;
-    font-weight: 600;
-    padding: 10px;
+.cartPage table tbody td {
+  font-size: 38px;
+  font-weight: 600;
+  padding: 10px;
 }
 
 #deleteItem {
-    background-color: none;
-    width: 10px;
-    height: auto;
+  background-color: none;
+  width: 10px;
+  height: auto;
 }
 
-.cartPage table tbody td img{
-    width: 100px;
-    height: auto;
+.cartPage table tbody td img {
+  width: 100px;
+  height: auto;
 }
 
 /* adjust quantity */
 .cartPage table tbody input {
-    margin: 0 5px;
-    width: 10px;
-    height: auto;
+  margin: 0 5px;
+  width: 10px;
+  height: auto;
 
-    font-size: 30px;
-    color: #151D25;
+  font-size: 30px;
+  color: #151d25;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .cartPage table tbody input {
-    height: 30px;
-    width: auto;
+  height: 30px;
+  width: auto;
 }
 
 /* checkout button */
-.coBtnWrap{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
+.coBtnWrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
 
-    background-color: #D35749;
-    border: 5px solid #D35749;
-    border-radius: 50px;
+  background-color: #d35749;
+  border: 5px solid #d35749;
+  border-radius: 50px;
 
-    color: white;
-    font-family: Montserrat;
+  color: white;
+  font-family: Montserrat;
 }
 
-.toCheckout button{
-    position: relative;
-    width: 85%;
-    left: 7.5%;
-    bottom: 100px;
-    font-size: 50px;
-    text-transform: uppercase;
-    cursor: pointer;
+.toCheckout button {
+  position: relative;
+  width: 85%;
+  left: 7.5%;
+  bottom: 100px;
+  font-size: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-#price{
-    font-weight: 600;
+#price {
+  font-weight: 600;
 }
 /* end of cart screen classes */
 
-
 /* order progress screen classes */
 #confirmedText {
-    position: relative;
-    top: 70px;
-    margin-left: 12.5%;
-    margin-bottom: 15%;
-    font-size: 38px;
-    font-weight: 600;
-    font-family: Montserrat;
+  position: relative;
+  top: 70px;
+  margin-left: 12.5%;
+  margin-bottom: 15%;
+  font-size: 38px;
+  font-weight: 600;
+  font-family: Montserrat;
 }
 
 .progressBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 150px;
 
-    position: relative;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    height: 18px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 18px;
 
-    background-color: white;
-    border-radius: 20px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 #progressFill {
-    position: absolute;
-    width: 1%;
-    height: 18px;
-    background-color: #D35749;
-    border-radius: 30px;
+  position: absolute;
+  width: 1%;
+  height: 18px;
+  background-color: #d35749;
+  border-radius: 30px;
 }
 
 .progressBar img {
-    position: relative;
-    width: 60px;
-    height: auto;
+  position: relative;
+  width: 60px;
+  height: auto;
 }
 
-
 .bottomContainer {
-    margin-top: 10%;
-    width: 100%;
-    height: 170vw;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 60px;
+  margin-top: 10%;
+  width: 100%;
+  height: 170vw;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 60px;
 }
 
 /* order contents */
-.orderContainer{
-    position: relative;
+.orderContainer {
+  position: relative;
 
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 750px;
-    height: auto;
-    padding: 30px;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 750px;
+  height: auto;
+  padding: 30px;
 
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
 
-    font-family: Montserrat;
-    color: black;
+  font-family: Montserrat;
+  color: black;
 }
 
-.orderContainer table{
-    text-align: center;
-    padding: 20px 20px;
-    width: 100%;
-    border-collapse: collapse;
+.orderContainer table {
+  text-align: center;
+  padding: 20px 20px;
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.orderContainer table thead td{
-    border: none;
-    padding: 25px;
-    font-size: 30px;
-    color: #273F56;
+.orderContainer table thead td {
+  border: none;
+  padding: 25px;
+  font-size: 30px;
+  color: #273f56;
 }
 
-.orderContainer table tbody td{
-    font-size: 32px;
-    padding: 20px;
+.orderContainer table tbody td {
+  font-size: 32px;
+  padding: 20px;
 }
 
-.orderContainer hr{
-    margin: 40px;
+.orderContainer hr {
+  margin: 40px;
 }
 
 #pickupInfoContainer {
-    bottom: 0;
-    margin: auto;
+  bottom: 0;
+  margin: auto;
 
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 #totalText {
-    margin-bottom: 100px;
-    margin-right: 30px;
+  margin-bottom: 100px;
+  margin-right: 30px;
 
-    text-align: right;
-    font-size: 40px;
-    font-family: Montserrat;
+  text-align: right;
+  font-size: 40px;
+  font-family: Montserrat;
 }
 
 .lockerNumContainer {
-    margin: auto;
-    align-content: space-between;
+  margin: auto;
+  align-content: space-between;
 
-    width: 85%;
-    background: none;
-    border-radius: 40px;
+  width: 85%;
+  background: none;
+  border-radius: 40px;
 
-    text-align: center;
-    font-size: 38px;
-    font-weight: bold;
-    font-family: Montserrat;
-    color: #D35749;
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  font-family: Montserrat;
+  color: #d35749;
 }
 
 .lockerNumContainer p {
-    padding: 20px;
+  padding: 20px;
 }
 
 #lockerPinText {
-    font-size: 48px;
-    font-weight: 700;
-    color: #D35749;
+  font-size: 48px;
+  font-weight: 700;
+  color: #d35749;
 }
 
-.toUnlock{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 25px;
-    margin: auto;
-    margin-top: 80px;
+.toUnlock {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+  margin: auto;
+  margin-top: 80px;
 
-    width: 70%;
-    height: 90px;
+  width: 70%;
+  height: 90px;
 
-    background-color: #D35749;
-    border: 5px solid #D35749;
-    border-radius: 50px;
+  background-color: #d35749;
+  border: 5px solid #d35749;
+  border-radius: 50px;
 
-    color: white;
-    font-size: 48px;
+  color: white;
+  font-size: 48px;
 }
 
 .toEnterPin {
-    position: relative;
-    width: 60px;
-    bottom: 10px;
+  position: relative;
+  width: 60px;
+  bottom: 10px;
 }
 
 /* end of order progress screen classes */
 
-
 /* tap and hold + locker unlocked screen classes */
 .container {
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.bottomLogo {
+    width: 750px;
+    height: 850px;
+    margin-bottom: 10%;
 }
 
 .centerSquare {
-    width: 650px;
-    height: 700px;
+  width: 650px;
+  height: 700px;
 }
 
 .centerNFC {
-    position: relative;
-    margin: auto;
-    top: 160px;
-    height: 200px;
-    width: auto;
+  position: relative;
+  margin: auto;
+  top: 200px;
+  height: 200px;
+  width: 300px;
+  height: 300px;
 }
 
 .scanText {
-    position: absolute;
-    top: 17%;
-    left: 50%;
-    font-size: 39px;
-    font-weight: 600;
-    font-family: Montserrat;
-    text-align: center;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  font-size: 55px;
+  font-weight: 600;
+  font-family: Montserrat;
+  text-align: center;
+  margin-right: -10%;
+  transform: translate(-50%, -50%);
 }
 
 .instructionsText {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    font-size: 25px;
-    font-family: Montserrat;
-    text-align: center;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  font-size: 35px;
+  font-family: Montserrat;
+  text-align: center;
+  margin-right: -10%;
+  transform: translate(-50%, -50%);
 }
 
 .centerCancel {
-    position: absolute;
-    left: 50%;
-    top: 85%;
-    width: 300px;
-    color:gray;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  width: 300px;
+  color: gray;
+  transform: translate(-50%, -50%);
 }
 
 .cancelButton {
-    position: absolute;
-    top: 87%;
-    left: 50%;
-    width: 300px;
-    height: 75px;
-    background-color: rgb(160, 160, 160, 1);
-    border-radius: 25px;
-    border: none;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  width: 300px;
+  height: 75px;
+  background-color: rgb(160, 160, 160, 1);
+  border-radius: 25px;
+  border: none;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
-.cancelText{
-    position: relative;
-    bottom: 8px;
-    font-family: Montserrat;
-    color: white;
-    /* right: 50px; */
-    font-size: 35px;
-    font-weight: 400;
-
+.cancelText {
+  position: relative;
+  bottom: 8px;
+  font-family: Montserrat;
+  color: white;
+  /* right: 50px; */
+  font-size: 35px;
+  font-weight: 400;
 }
 
 .unlockText {
-    position: relative;
-    top: 10%;
-    width: 80%;
-    margin: auto;
-    font-size: 35px;
-    font-weight: 600;
-    font-family: Montserrat;
-    text-align: center;
+  position: relative;
+  top: 10%;
+  width: 80%;
+  margin: auto;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Montserrat;
+  text-align: center;
 }
 
 .centerLocker {
-    position: relative;
-    right: 10px;
-    top: 17%;
-    width: 400px;
-    color:gray;
+  position: relative;
+  right: 10px;
+  top: 17%;
+  width: 400px;
+  color: gray;
 }
 
-.box2{
-    position: relative;
-    height: 600px;
-    width: 600px;
-    bottom: 50px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    border-radius: 100px;
+.box2 {
+  position: relative;
+  height: 850px;
+  width: 750px;
+  bottom: 50px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  border-radius: 100px;
 }
 
-.toLock{
-    top: 200px;
-    position: relative;
-    width: 400px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
+.toLock {
+  top: 200px;
+  position: relative;
+  width: 400px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 /* enter pin screen classes*/
 .pinEntryContainer {
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
 
-    width: 100%;
-    height: 180vw;
+  width: 100%;
+  height: 180vw;
 
-    background: #9FABB7;
-    border-radius: 50px;
-    color: black;
+  background: #9fabb7;
+  border-radius: 50px;
+  color: black;
 
-    animation: float-in 1.0s ease-in-out forwards;
-    animation-delay: 0.8s;
+  animation: float-in 1s ease-in-out forwards;
+  animation-delay: 0.8s;
 
-    visibility: hidden; /*change in visibility mimics the nfc redirecting to enter pin page*/
-    }
+  visibility: hidden; /*change in visibility mimics the nfc redirecting to enter pin page*/
+}
 
 @keyframes float-in {
   0% {
@@ -499,98 +503,98 @@ cartToggle{
 }
 
 .pinText {
-    margin: auto;
-    position: relative;
-    top: 100px;
-    padding: 100px;
-    font-size: 49px;
-    font-weight: 600;
-    font-family: Montserrat;
-    text-align: center;
+  margin: auto;
+  position: relative;
+  top: 100px;
+  padding: 100px;
+  font-size: 49px;
+  font-weight: 600;
+  font-family: Montserrat;
+  text-align: center;
 }
 
 .codeText {
-    margin: auto;
-    margin-bottom: 150px;
+  margin: auto;
+  margin-bottom: 150px;
 
-    position: relative;
-    top: 100px;
+  position: relative;
+  top: 100px;
 
-    width: 380px;
-    height: 50px;
-    background: white;
-    border-radius: 20px;
-    padding: 40px;
+  width: 380px;
+  height: 50px;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
 
-    font-size: 52px;
-    font-weight: bold;
-    font-family: Montserrat;
-    text-align: center;
-    color: #D35749;
+  font-size: 52px;
+  font-weight: bold;
+  font-family: Montserrat;
+  text-align: center;
+  color: #d35749;
 }
 
 .numpad {
-    position: relative;
-    top: 70px;
+  position: relative;
+  top: 70px;
 
-    margin: auto;
-    width: 620px;
+  margin: auto;
+  width: 620px;
 }
 
 .numpad input {
-    width:180px;
-    height: 180px;
+  width: 180px;
+  height: 180px;
 
-    border: none;
-    margin: 10px;
-    background-color: white;
-    border-radius: 50%;
+  border: none;
+  margin: 10px;
+  background-color: white;
+  border-radius: 50%;
 
-    font-size: 48px;
+  font-size: 48px;
 }
 
 #clear {
-    font-size: 30px;
-    font-weight: bold;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 #unlock {
-    font-size: 30px;
-    font-weight: bold;
-    color: #D35749;
+  font-size: 30px;
+  font-weight: bold;
+  color: #d35749;
 
-    border:5px solid #D35749;
+  border: 5px solid #d35749;
 }
 
 /* customer leaving screen classes */
 .centerLock {
-    position: relative;
-    margin: auto;
-    top: 25%;
-    width: 200px;
-    height: 200px;
+  position: relative;
+  margin: auto;
+  top: 25%;
+  width: 200px;
+  height: 200px;
 }
 
 .relockText {
-    position: relative;
-    top: 40%;
-    left: 50%;
-    width: 300px;
-    font-size: 30px;
-    font-family: Montserrat;
-    text-align: center;
-    transform: translate(-50%, -50%);
+  position: relative;
+  top: 40%;
+  left: 50%;
+  width: 300px;
+  font-size: 30px;
+  font-family: Montserrat;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 /* farewell screen class */
 .centerFarewell {
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    text-align: center;
-    font-size: 39px;
-    font-weight: 600;
-    font-family: Montserrat;
-    color: white;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  text-align: center;
+  font-size: 39px;
+  font-weight: 600;
+  font-family: Montserrat;
+  color: white;
+  transform: translate(-50%, -50%);
 }

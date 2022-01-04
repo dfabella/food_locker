@@ -119,8 +119,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, auto));
     grid-gap: 10%;
-    padding-right: 5rem;
-    padding-left: 5rem;
+    padding: 5px;
 
     justify-content: space-evenly;
     justify-items: center;
@@ -133,6 +132,9 @@
     position: relative;
     /* height: 224.36px;
     width: 185.87px; */
+    min-width: 40vw;
+    min-height: 50vw;
+    padding: 8px;
     top: 120%;
     background: rgba(255, 255, 255, 0.5);
     text-align: center;
