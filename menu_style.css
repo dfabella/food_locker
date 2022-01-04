@@ -134,6 +134,7 @@
     width: 185.87px; */
     min-width: 40vw;
     min-height: 50vw;
+    padding: 8px;
     top: 120%;
     background: rgba(255, 255, 255, 0.5);
     text-align: center;
