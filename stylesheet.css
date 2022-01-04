@@ -174,7 +174,7 @@ cartToggle{
     position: relative;
     width: 85%;
     left: 7.5%;
-
+    bottom: 100px;
     font-size: 50px;
     text-transform: uppercase;
     cursor: pointer;
