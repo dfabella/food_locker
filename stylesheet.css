@@ -489,12 +489,10 @@ cartToggle {
 
 @keyframes float-in {
   0% {
-    transform: translate(0, 0);
-
+    transform: translate(0, 90%);
   }
   100% {
-    transform: translate(0, 90%);
-
+    transform: translate(0, 0);
   }
 }
 
