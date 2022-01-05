@@ -156,14 +156,3 @@ function combineFoodOrder() {
 
     return oneLineOrder;
 }
-
-// assigns 4 digit pin and locker number 1 to 25
-    function assignLockerAndPin() {
-        pin = Math.floor(1000 + Math.random() * 9000);
-        lockerNum = Math.floor(1 + Math.random() * 24);
-
-        console.log(pin);
-        console.log(lockerNum);
-        localStorage.setItem("orderPin", pin);
-        localStorage.setItem("orderLocker", lockerNum);
-    }
