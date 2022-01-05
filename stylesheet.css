@@ -485,14 +485,17 @@ cartToggle {
 
   animation: float-in 1s ease-in-out forwards;
   animation-delay: 0.8s;
+  visibility: hidden;
 }
 
 @keyframes float-in {
   0% {
-    transform: translate(0, 90%);
+    visibility: visible;
+    transform: translate(0, 100%);
   }
   100% {
-    transform: translate(0, 0);
+    visibility: visible;
+    transform: translate(0, 4%);
   }
 }
 
