@@ -42,27 +42,7 @@
         });
     }
 
-        // assigns 4 digit pin and locker number 1 to 25
-    function assignLockerAndPin() {
-        let pin = Math.floor(1000 + Math.random() * 9000);
-        let ockerNum = Math.floor(1 + Math.random() * 24);
-
-        get(ref(database, 'current_orders/' + pin)).then((snapshot) => {
-            let generatedPin = localStorage.getItem("orderPin");
-            if (snapshot.exists() && (pin.localeCompare(generatedPin)) == 0) {
-                assignLockerAndPin();
-                return;
-            }
-        })
-
-        console.log(pin);
-        console.log(lockerNum);
-        localStorage.setItem("orderPin", pin);
-        localStorage.setItem("orderLocker", lockerNum);
-    }
-
     window.addToFirebase = addToFirebase;
-    window.assignLockerAndPin = assignLockerAndPin;
 </script>
 
 <body style="background-color: #40586F;">
